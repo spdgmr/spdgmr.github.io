@@ -1,8 +1,4 @@
-#### speedie's page // | [project 081](https://p081.github.io) | [elevendebloater](https://github.com/speediegamer/elevendebloater) | [more projects](https://spdgmr.github.io/projects) | [configs/dotfiles](https://spdgmr.github.io/dotfiles) | [discord](https://ffdiscord.github.io) | [twitter](https://nitter.net/spdgmr) | [yt](https://invidious.namazso.eu/speedie) | 
+#### speedie's page // [Project 081](https://p081.github.io) | [Elevendebloater](https://github.com/speediegamer/elevendebloater) | [More Projects](https://spdgmr.github.io/projects) | [Configs/Dotfiles](https://spdgmr.github.io/dotfiles) | [Discord server](https://ffdiscord.github.io) | [Twitter](https://nitter.net/spdgmr) | [YouTube](https://invidious.namazso.eu/speedie)
 --------------
-welcome to speedie's page (was made using only github readme.md files only btw)
+### Welcome to [speedie's](https://invidious.namazso.eu/speedie) website. I am a [linux](https://gentoo.org) user and I make guides on a wide variety of topics, mostly technology related. I also preserve [Wii Homebrew](https://github.com/forwarderfactory/hbc-archive) and I work on Apple projects sometimes such as Project 081.
 
-still wip and probably broken
-
-----
-##### install my configs (bash): `wget https://tinyurl.com/cfginstall && chmod +x ./install.sh && ./install.sh`
