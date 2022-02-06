@@ -2,3 +2,4 @@
 --------------
 ### Welcome to [speedie's](https://invidious.namazso.eu/speedie) website. I am a [linux](https://gentoo.org) user and I make guides on a wide variety of topics, mostly technology related. I also preserve [Wii Homebrew](https://github.com/forwarderfactory/hbc-archive) and I work on Apple projects sometimes such as Project 081.
 
+This page is WIP and not finished.
