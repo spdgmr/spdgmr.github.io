@@ -1,6 +1,6 @@
 ## speedie's page 
 
-#### // [Project 081](https://p081.github.io) | [Elevendebloater](https://github.com/speediegamer/elevendebloater) | [sfetch](https://spdgmr.github.io/sfetch) | [More Projects](https://spdgmr.github.io/projects) | [spDE](https://speedie-de.github.io) | [Discord server](https://ffdiscord.github.io) | [Twitter](https://nitter.net/spdgmr) | [YouTube](https://invidious.namazso.eu/speedie)
+#### // [Project 081](https://p081.github.io) | [Elevendebloater](https://spdgmr.github.io/elevendebloater) | [sfetch](https://spdgmr.github.io/sfetch) | [More Projects](https://spdgmr.github.io/projects) | [spDE](https://speedie-de.github.io) | [Discord server](https://ffdiscord.github.io) | [Twitter](https://nitter.net/spdgmr) | [YouTube](https://invidious.namazso.eu/speedie)
 --------------
 ### Welcome to [speedie's](https://invidious.namazso.eu/speedie) website. 
 
@@ -13,13 +13,20 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 - [Things I hate](https://spdgmr.github.io/hate) // suckless.org/sucks ripoff!
 - [Projects](https://spdgmr.github.io/projects) // Projects my name is on.
 - [Machines](https://spdgmr.github.io/machines) // Machines I have.. I don't know I ran out of ideas.
+
+## Other Projects
+- [Project 081](https://p081.github.io) // Modification of Apple's Mac OS X 10.4.10 Tiger which adds support for the newer Early 2008 Apple Macs.
 - [sfetch](https://spdgmr.github.io/sfetch) // speedie's fetch.
-- [spDE](https://speedie-de.github.io) // speedie's suckless Desktop Environment.]
+- [ElevenDebloater](https://spdgmr.github.io/elevendebloater) // Open source Windows 10/11 Debloater
+- [spDE](https://speedie-de.github.io) // speedie's suckless Desktop Environment.
 
 ## Join my Discord server
 Join my Discord server if you want I guess.. We talk about Wii and other interesting stuff such as tech in general.
 
 [[Join]](https://ffdiscord.github.io)
+
+## Software License
+Nearly all if not all my software is licensed under the MIT license. Still check the license if you're unsure.
 
 ## Based people & stuff
 - [TechnologicalStuff](https://youtube.com/technologicalstuff)
