@@ -9,10 +9,12 @@ I am a [Gentoo Linux](https://gentoo.org) user and I make guides on a wide varie
 You can probably find me on Discord *speedie#8260* in various servers, including [my own](https://ffdiscord.github.io).
 
 ## Site navigation
-- [sfetch](https://spdgmr.github.io/sfetch) // speedie's fetch
-- [spDE](https://speedie-de.github.io) // speedie's suckless Desktop Environment]
+- [Guides](https://spdgmr.github.io/guides) // Text and video guides I've made.
 - [Things I hate](https://spdgmr.github.io/hate) // suckless.org/sucks ripoff!
-- [More Projects](https://spdgmr.github.io/projects) // Projects I haven't listed above.
+- [Projects](https://spdgmr.github.io/projects) // Projects my name is on.
+- [Machines](https://spdgmr.github.io/machines) // Machines I have.. I don't know I ran out of ideas.
+- [sfetch](https://spdgmr.github.io/sfetch) // speedie's fetch.
+- [spDE](https://speedie-de.github.io) // speedie's suckless Desktop Environment.]
 
 ## Join my Discord server
 Join my Discord server if you want I guess.. We talk about Wii and other interesting stuff such as tech in general.
