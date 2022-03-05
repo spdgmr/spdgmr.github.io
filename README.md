@@ -13,6 +13,7 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 - [Things I hate](https://spdgmr.github.io/hate) // suckless.org/sucks ripoff!
 - [Projects](https://spdgmr.github.io/projects) // Projects my name is on.
 - [Machines](https://spdgmr.github.io/machines) // Machines I have.. I don't know I ran out of ideas.
+- [Virtual Machines](https://spdgmr.github.io/vms) // Free to use virtual machine disks for various OSes.
 
 ## Other Projects
 - [Project 081](https://p081.github.io) // Modification of Apple's Mac OS X 10.4.10 Tiger which adds support for the newer Early 2008 Apple Macs.
