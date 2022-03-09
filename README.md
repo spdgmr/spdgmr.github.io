@@ -1,6 +1,6 @@
-## speedie's page 
+# speedie's page
 
-#### // [Project 081](https://p081.github.io) | [Elevendebloater](https://spdgmr.github.io/elevendebloater) | [sfetch](https://spdgmr.github.io/sfetch) | [More Projects](https://spdgmr.github.io/projects) | [spDE](https://speedie-de.github.io) | [Discord server](https://ffdiscord.github.io) | [Twitter](https://nitter.net/spdgmr) | [YouTube](https://invidious.namazso.eu/speedie)
+#### // [Project 081](https://p081.github.io) | [Elevendebloater](https://spdgmr.github.io/elevendebloater) | [sfetch](https://spdgmr.github.io/sfetch) | [More Projects](https://spdgmr.github.io/projects) | [spDE](https://speedie-de.github.io) | [Discord server](https://ffdiscord.github.io) | [Twitter](https://nitter.net/spdgmr) | [YouTube](https://invidious.namazso.eu/speedie) | [RSS](https://raw.githubusercontent.com/spdgmr/posts/main/rss.xml)
 --------------
 ### Welcome to [speedie's](https://invidious.namazso.eu/speedie) website. 
 
@@ -11,7 +11,7 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 ## Site navigation
 - [Guides](https://spdgmr.github.io/guides) // Text and video guides I've made.
 - [Things I hate](https://spdgmr.github.io/hate) // suckless.org/sucks ripoff!
-- [Posts](https://spdgmr.github.io/posts) // Posts and ranting about stuff. WARNING: You may see opinions you don't agree with!!
+- [Posts](https://spdgmr.github.io/posts) // Posts and ranting about stuff. WARNING: You may see opinions you don't agree with!! (Most posts can be found using [RSS](https://raw.githubusercontent.com/spdgmr/posts/main/rss.xml))
 - [Projects](https://spdgmr.github.io/projects) // Projects my name is on.
 - [Machines](https://spdgmr.github.io/machines) // Machines I have.. I don't know I ran out of ideas.
 - [Virtual Machines](https://spdgmr.github.io/vms) // Free to use virtual machine disks for various OSes.
