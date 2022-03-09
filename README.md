@@ -11,6 +11,7 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 ## Site navigation
 - [Guides](https://spdgmr.github.io/guides) // Text and video guides I've made.
 - [Things I hate](https://spdgmr.github.io/hate) // suckless.org/sucks ripoff!
+- [Posts](https://spdgmr.github.io/posts) // Posts and ranting about stuff. WARNING: You may see opinions you don't agree with!!
 - [Projects](https://spdgmr.github.io/projects) // Projects my name is on.
 - [Machines](https://spdgmr.github.io/machines) // Machines I have.. I don't know I ran out of ideas.
 - [Virtual Machines](https://spdgmr.github.io/vms) // Free to use virtual machine disks for various OSes.
