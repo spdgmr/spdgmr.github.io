@@ -20,7 +20,7 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 - [Project 081](https://p081.github.io) // Modification of Apple's Mac OS X 10.4.10 Tiger which adds support for the newer Early 2008 Apple Macs.
 - [sfetch](https://spdgmr.github.io/sfetch) // speedie's fetch.
 - [ElevenDebloater](https://spdgmr.github.io/elevendebloater) // Open source Windows 10/11 Debloater
-- [spDE](https://speedie-de.github.io) // speedie's suckless Desktop Environment.
+- [spDE](https://spdgmr.github.io/spde) // speedie's suckless Desktop Environment.
 
 ## Join my Discord server
 Join my Discord server if you want I guess.. We talk about Wii and other interesting stuff such as tech in general.
