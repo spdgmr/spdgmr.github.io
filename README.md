@@ -21,6 +21,7 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 - [sfetch](https://spdgmr.github.io/sfetch) // speedie's fetch.
 - [ElevenDebloater](https://spdgmr.github.io/elevendebloater) // Open source Windows 10/11 Debloater
 - [spDE](https://spdgmr.github.io/spde) // speedie's suckless Desktop Environment.
+- [dfmpeg](https://spdgmr.github.io/dfmpeg) // dmenu/rofi GUI for ffmpeg
 
 ## Join my Discord server
 Join my Discord server if you want I guess.. We talk about Wii and other interesting stuff such as tech in general.
