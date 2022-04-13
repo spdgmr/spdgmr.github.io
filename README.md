@@ -24,6 +24,9 @@ You can probably find me on Discord *speedie#8260* in various servers, including
 - [dfmpeg](https://spdgmr.github.io/dfmpeg) // dmenu/rofi GUI for ffmpeg
 - [xshbar](https://spdgmr.github.io/xshbar) // Customizable, minimal and modular xsetroot bar designed to be used with window managers.
 
+## IRC
+You can join #ff or #forwarderfactory on libera.chat IRC.
+
 ## Join my Discord server
 Join my Discord server if you want I guess.. We talk about Wii and other interesting stuff such as tech in general.
 
