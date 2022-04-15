@@ -1,0 +1,66 @@
+<head>
+<title>xshbar // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="xshbar is a customizable, modular and minimal status bar for window managers and shells ">
+<meta name="author" content="speedie">
+<h1>speedie's website</h1>
+<a href="https://github.com/speediegamer">GitHub</a>
+<a href="projects.html">Projects</a>
+<a href="blog.html">Blog</a>
+<a href="https://github.com/speedie-de">Dotfiles</a>
+<a href="https://raw.githubusercontent.com/spdgmr/posts/main/rss.xml">RSS Feed</a>
+</header>
+<body>
+
+<h1>xshbar</h1>
+<h4>Customizable xsetroot bar designed to be used with window managers.</h4>
+<p><img src="https://user-images.githubusercontent.com/71722170/163267664-186ef5d8-c772-4c47-ba80-dacc30e7d51c.png" alt="image"></p>
+<h3>Installation</h3>
+<ul>
+<li>Install git</li>
+<li>git clone <a href="https://github.com/speediegamer/xshbar/">https://github.com/speediegamer/xshbar/</a></li>
+<li>cd xshbar</li>
+<li>make install</li>
+<li>See Usage.</li>
+</ul>
+<h3>Usage</h3>
+<p>xshbar must be used with a window manager that supports xsetroot and xsetroot must be installed. First install xsetroot and then make sure your window manager supports xsetroot.</p>
+<p>Once you&#39;re sure it does, add ~/.config/xshbar/xshbar &amp; to ~/.xinitrc</p>
+<p>Now follow Basic Editing</p>
+<h3>Basic Editing</h3>
+<p>In order to use xshbar, it needs to have something to print. With xshbar this is done using plugins. A few come bundled with xshbar but not all.</p>
+<h5>cd ~/.config/xshbar/plugins</h5>
+<p>and then you will be able to see all available plugins. Let&#39;s say we want date.plugin.</p>
+<h5>cp date.plugin ../plugins.use</h5>
+<p>You can now vim into that file and see all of its variables. We can mention these in the file we&#39;re about to edit.</p>
+<h5>cd ~/.config/xshbar &amp;&amp; vim prn</h5>
+<p>prn is the file which contains what we will be printing.</p>
+<p><img src="https://user-images.githubusercontent.com/71722170/162231229-0ebaabc9-9e12-4ba1-bc15-cc17542fd92c.png" alt="image"></p>
+<p>This is an example of what it can print. You can type plain text in XSHBAR_CORE_DISPLAY or specify a variable using $<myvariable>
+You can also print the output of a command by using </p>
+<p>$(echo foo)</p>
+<h5>vim ~/.config/xshbar/xshbar</h5>
+<p><img src="https://user-images.githubusercontent.com/71722170/162249304-d0c9dd0e-a4aa-4757-bc97-7aee71717084.png" alt="image"></p>
+<p>Add your plugins to XSHBAR_IMPORT() like shown in the screenshot above.</p>
+<p>When you&#39;re done, save the file, and kill your X session and startx. Enjoy!</p>
+<h3 id="plugins">Plugins</h3>
+<p>Default plugins aren&#39;t enough for you? Fear not because there are more plugins available for you to grab.
+See <a href="xshbar-plugins.html">this</a> page for more information.</p>
+<h3>Credits</h3>
+<ul>
+<li>Me, I am so based</li>
+<li>You (thanks for using this)</li>
+<li>Possible contributors.</li>
+</ul>
+<h3>License</h3>
+<p>xshbar is licensed under the MIT license. The GitHub repository contains a LICENSE file which you can read if you&#39;re not sure what terms apply to your usage of this software.</p>
+<h3>NOTE</h3>
+<p>Please be very careful and look through plugins before adding them to plugins.use. Some plugins may be malicious and delete or steal user data or break your system.</p>
+
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h3>Website licensed under GNU GPLv3</h3>
+</footer>
+</body>
+</html>

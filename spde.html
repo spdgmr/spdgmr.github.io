@@ -1,0 +1,67 @@
+<head>
+<title>spDE // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="spDE is a collection of forked suckless software that has been patched and riced. It's a one line command installation which makes it a very easy way to use and get into suckless software. Most software included is used using the terminal.">
+<meta name="author" content="speedie">
+<h1>speedie's website</h1>
+<a href="https://github.com/speediegamer">GitHub</a>
+<a href="projects.html">Projects</a>
+<a href="blog.html">Blog</a>
+<a href="https://github.com/speedie-de">Dotfiles</a>
+<a href="https://raw.githubusercontent.com/spdgmr/posts/main/rss.xml">RSS Feed</a>
+</header>
+<body>
+<h2>spDE</h2>
+
+<p><img src="https://user-images.githubusercontent.com/71722170/156585793-71d13e37-eacc-4982-aa08-d03ea561a7a6.png" width="600" width="120" alt="image"></p>
+<h3>What's spDE?</h3>
+<p>spDE is a collection of mostly forked suckless software that has been patched and riced. it&#39;s a &quot;one line command&quot; install which makes it an easy way to use suckless software (although not as customizable)</p>
+<h3>Software</h3>
+<p>spDE comes with dwm as the window manager, st as the terminal, slstatus as the status bar, dmenu as the application launcher. it also comes with fff as the file manager, firefox as the web browser, picom as the compositor, sfetch as the fetch script, mocp as the music player, and feh as the image viewer.</p>
+<h3>Compatibility</h3>
+<p>spDE is technically compatible with every linux distribution but the install script are not. currently the installation scripts should work with the following distributions as well as anything based on them:</p>
+<ul>
+<li><a href="https://debian.org">Debian</a></li>
+<li><a href="https://archlinux.org">Arch</a></li>
+<li><a href="https://gentoo.org">Gentoo</a></li>
+<li><a href="https://voidlinux.org">Void</a></li>
+</ul>
+<h3>Installation</h3>
+<p>Set up a debian/arch/gentoo/redhat/void system and log in as root. make sure to create a new user and change their password. </p>
+<p>Make sure you have unzip, curl and bash or zsh installed before running these!</p>
+<p>Then run one of these commands depending on what shell you use. if you&#39;re not sure, you can run &quot;echo $SHELL&quot; in a terminal. note that the shell cannot be sh.</p>
+<pre><code><span class="hljs-keyword">for</span> <span class="hljs-string">zsh:</span> curl <span class="hljs-string">https:</span><span class="hljs-comment">//getspde.github.io | zsh</span>
+<span class="hljs-keyword">for</span> <span class="hljs-string">bash:</span> curl <span class="hljs-string">https:</span><span class="hljs-comment">//getspde.github.io | bash</span>
+<span class="hljs-keyword">for</span> <span class="hljs-string">fish:</span> rm -rf <span class="hljs-comment">/* # seriously that thing sucks.</span>
+</code></pre><p>then install xorg-server, xinit, xf86-input-libinput and xf86-video-<em>whatever-you-have</em> using your distro&#39;s package manager.</p>
+<h3>Configure and Customize</h3>
+<p>To configure the suckless software, edit these files. </p>
+<p><img src="https://user-images.githubusercontent.com/71722170/155650465-d55c80d8-2582-4e9f-b1f8-beadfdbbb23a.png" alt="image"></p>
+<p>Then cd to /usr/local/bin/.spDE/<software> and run make</p>
+<h3>keybinds</h3>
+<p>These are the default keybinds
+In spDE, you can press ctrl+alt+h to see them at any time.</p>
+<p><img src="https://user-images.githubusercontent.com/71722170/156586357-eef95fec-174e-4a8e-9342-eb6bc10575f3.png" alt="image"></p>
+<h3>Keeping up with the updates</h3>
+<p>You can use newsboat and my RSS feed (comes with spDE) to keep up with the updates easily.
+Just run newsboat in the terminal and select &#39;speedie // based posts&#39;</p>
+<h3>credit</h3>
+<ul>
+<li>dwm, dmenu, slstatus and st made by <a href="https://suckless.org">suckless.org</a></li>
+<li>firefox made by <a href="https://mozilla.org">mozilla</a></li>
+<li>sfetch fetch script made by <a href="https://spdgmr.github.io/sfetch">speedie</a></li>
+<li>fff file manager made by <a href="https://github.com/dylanaraps/fff">dylanaraps</a></li>
+<li>feh image viewer made by <a href="https://feh.finalrewind.org/">finalrewind</a></li>
+<li>suckless software riced and patched by <a href="https://spdgmr.github.io">speedie</a></li>
+<li>setwallpaper script by <a href="https://spdgmr.github.io">speedie</a></li>
+</ul>
+<h3>Contributing</h3>
+<p>If you would like to contribute to this project, contribute to the people who made the software (see credits above).
+If you would like to support me, please test the software for me.</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h3>Website licensed under GNU GPLv3</h3>
+</footer>
+</body>
+</html>
