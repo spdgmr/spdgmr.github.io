@@ -1,21 +1,27 @@
 <head>
+<div class="header">
 <title>rchat // speedie's website</title>
 <meta charset="UTF-8">
-<meta name="description" content="rchat is a command-line rautafarmi instance client with Vim keybinds written in Bash.">
+<meta name="description" content="rchat or rautafarmi chat is a command-line rautafarmi instance client with Vim keybinds written in Bash. rchat has color support, $EDITOR support, xshbar integration, and message logging support as well as .Xresources (xrdb) and notification support through patching.">
 <meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="regular.css">
 <h1>speedie's website</h1>
 <link rel="icon" type="image/png" href="antibloat.png">
-<a href="https://github.com/speediegamer">GitHub</a>
-<a href="projects.html">Projects</a>
-<a href="blog.html">Blog</a>
-<a href="https://github.com/speedie-de">Dotfiles</a>
-<a href="rss.xml">RSS Feed</a>
+<a href="index.html">🏠 Home</a>
+<a href="">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+</a>
+</div>
+<hr>
 </header>
 <body>
 <h1>rchat</h1>
   <p>rchat is a command-line rautafarmi instance client with Vim keybinds written in Bash. (also works in zsh)</p>
   <img src="rchat.png" alt="image">
-  <pre></pre>
   <p>It is very customizable and is customized through editing with an editor.</p>
 <h1>Features</h1>
 <ul>
@@ -36,15 +42,11 @@
 </ul>
 <h1>Installation</h1>
   <p>To install rchat, If you run Arch Linux or any distributions based on it, you can simply get it from the AUR (although it may be slightly outdated). Package is maintained by nezbednik and as of 0.4, is fully up-to-date. If you use 'yay', run 'yay -S rchat'. Then you can just begin using it.</p>
-<pre></pre>
   <p>If you run Gentoo Linux, you can add <a href="https://github.com/spoverlay/splay">my overlay</a> using layman and then just emerge it. The ebuild is maintained by me so it should be up-to-date.</p>
   <p>Otherwise, just curl <a href="https://raw.githubusercontent.com/speediegamer/rchat/main/rchat">this link</a> to /usr/bin and chmod +x it.</p>
-<pre></pre>
 <h1>Usage</h1>
   <p>See Installation, then simply run it in a terminal. To join the default instance, simply type ':j'.</p>
-  <pre></pre>
   <p>To set a different instance, type ':set instance' and then enter your instance. If the instance is invalid or you wanna set it back, type ':set instance default'.</p>
-  <pre></pre>
   <p>From here, you can read the documentation by typing ':help'.</p>
 <h1>Patches</h1>
   <p>rchat doesn't come with features I believe a lot of people won't use. If you need more, you can use the GNU 'patch' command with one of these .diff files below.</p>
