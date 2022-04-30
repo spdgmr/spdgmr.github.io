@@ -1,0 +1,42 @@
+<head>
+<div class="header">
+<title>xinit is bloated // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="Some GNU/Linux users are very serious about maintaining a minimal system. They use software like dwm yet they keep using bloat just to do simple things like start an X session.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="regular.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="blog.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>xinit is bloated.</h2>
+<h4>2022-04-30</h4>
+</body>
+<p>Some GNU/Linux users are very serious about maintaining a minimal system. They use software like dwm as their window manager, written in C with very few dependencies (definitely check it out).</p>
+<p>But even then, they keep using a bloated piece of software just to run an X session.</p>
+<p>That program is 'xinit' or 'startx' as some people call it because that's the command you run to start an X session. To me, there is absolutely no reason to keep using such a bloated program when minimal alternatives exist. In fact, it's really easy to switch to a better alternative.</p>
+<p>If you're running Wayland then you can ignore this post/throw that bloat in the trash, it's not for you. For the rest of us Xorg GNU/Linux chads, I'm going to walk you through a simple program called 'sx'. I've known about this program for months but never actually bothered to try it. As I quickly found it months later however, it is REALLY easy to switch over to sx, even on a system that's already fully set up.</p>
+<p>To get started, change directory to wherever you want and 'git clone https://github.com/Earnestly/sx.git'. Now 'cd sx' and run 'make install' as root.</p>
+<p>Now that you've got sx installed, it's time to start using it. If you're not sure how to use it, you can simply check the 'man sx' page.</p>
+<p>To start a server, if your .xinitrc is in ~ then you can probably just run 'sx sh ~/.xinitrc'. You can use the exact same .xinitrc with sx as with xinit. Now, if you've moved your .xinitrc then it's the exact same command, just change the path.</p>
+<p>If your X is configured properly and the .xinitrc is written properly, your window manager should start just like it did with xinit. Now, sx is just 36 SLOC of POSIX compliant shell so if you want you can easily make changes to it.</p>
+<p>Unless you require very specific settings though, which is quite rare you probably don't need to modify it anyway.</p>
+<p>sx does however have a few problems although I've only encountered one with dfmpeg/ffmpeg where it won't record. It's not a huge deal and it's probably just a dfmpeg thing. If it is and I manage to solve it, a new version of dfmpeg should be released soon.</p>
+<p>Either way, sx is really everything you need an 'X starter' to do. Nothing less, nothing more.</p>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
