@@ -1,0 +1,85 @@
+<head>
+<div class="header">
+<title>dmenu scripts // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="This page contains a list of nearly all dmenu scripts I've written. I love dmenu and you probably do too.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="regular.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="blog.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>dmenu scripts</h2>
+<p>dmenu is an extremely powerful menu prompt for Linux/BSD. It allows anyone to write interactive menus for use with shell scripts. Here is a list of nearly all dmenu scripts I've written.
+<h4>dboard</h4>
+<p>Expandable and customizable dmenu virtual keyboard for Linux/BSD with Emoji, Copypasta, Swedish/Finnish, Spanish, Chinese, Japanese, Baybain and Arabic character support.
+<p>It opens a dmenu/rofi prompt with a list of characters. When the user selects one, it is automatically copied to the clipboard using xclip. You can then paste it anywhere you want.</p>
+<img src="https://user-images.githubusercontent.com/71722170/166553999-e3dbb654-6d15-475e-a8ce-bb508c34be75.png" alt="image">
+<img src="https://user-images.githubusercontent.com/71722170/166553916-2a36c6c7-5b0e-49f2-a670-06a620923b36.png" alt="image">
+<p>To use, simply download the script and put it in $PATH. Make sure dmenu is patched for 'allow-color-font' and install libXft-bgra to prevent it from crashing. Also patch st and dwm if those are used. Make sure a color font is installed. I suggest JoyPixels or Noto Emoji. Finally, make sure xclip is installed and running. If you want notifications, make sure libnotify is installed.</p>
+<a href="https://raw.githubusercontent.com/speediegamer/dboard/main/dboard">[Download]</a>
+<a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/emojilist">[Emoji only version]</a>
+
+<h5>Licenced under GNU GPLv3.</h5>
+<h4>dsearch</h4>
+<p>dmenu/rofi script which can search every search engine you can imagine (Google, DuckDuckGo, searx, 4chan, Arch Wiki, Gentoo Wiki, and much more)
+<p>To use, simply add a list of search engines. There are preconfigured ones if you're not sure how to add your own.</p>
+<p>To install, git clone <a href="https://github.com/speediegamer/dsearch.git">[URL]</a> and run <code>make install</code>
+<h5>Licensed under GNU GPLv3.</h5>
+<h4>dcalc</h4>
+<p>Super basic dmenu calculator which has the essentials</p>
+<p>To install, simply download <a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/dcalc">[URL]</a> script and copy it to $PATH. Then <code>chmod +x</code> it.</p>
+<h5>Licensed under GNU GPLv3.</h5>
+<h4>dfmpeg</h4>
+<img src="https://user-images.githubusercontent.com/71722170/161388108-fecb715d-8c6b-4fe3-8815-08367e66a3e7.png" alt="image">
+<p>This script acts as a frontend for screen recording with ffmpeg. It supports ALSA, PulseAudio, PipeWire and JACK. For more information, visit its page. <a href="dfmpeg.html">[dfmpeg]</a></p>
+<h4>dscratchpad</h4>
+<p>"Scratchpad" dmenu script which allows you to write quick, small and disposable notes which can be displayed, edited and deleted at any time.</p>
+<a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/dscratchpad">[Download]</a>
+<h5>Licensed under GNU GPLv3.</h5>
+<h4>dvim</h4>
+<p>This simple dmenu script lists out your scripts in (Default: ~/Scripts) and opens the one you select in $EDITOR.</p>
+<p>To install, simply download <a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/dvim">[URL]</a> script and copy it to $PATH. Then <code>chmod +x</code> it.</p>
+<h5>Licensed under GNU GPLv3.</h5>
+<h4>shutdown</h4>
+<p>This simple dmenu script asks if the user wants to Shutdown, Reboot, Exit, Lock or Kill X.</p>
+<p>To install, download the script, copy it to $PATH and make it executable.
+<a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/shutdown.sh">[Download]</a>
+<h5>Licensed under GNU GPLv3.</h5>
+<h4>genpkg</h4>
+<p>This stupid simple shell script opens the Gentoo wiki page for an ebuild.</p>
+<p>It supports dmenu and rofi but can also be run from a terminal.</p>
+<p>Bare minimum requirement: Run <code>mkdir -pv ~/.config/genpkg && printf "GENPKG_USEDMENU=true\nGENPKG_DMENU_PATH=/usr/local/bin/dmenu\nGENPKG_DMENU_TERMINAL=$TERMINAL\nGENPKG_BROWSER=links" > ~/.config/genpkg/genpkgrc# Make sure all the values match your system.</code>
+<p>Then simply download the script, copy it to $PATH and make it executable.
+<a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/genpkg">[Download]</a>
+<h5>Licensed under GNU GPLv3</h5>
+<h4>copyout</h4>
+<p>This super simple script copies the output of a command. It also shows previous commands through $HISTFILE (which should be a path to your shell history file).
+<p>This doesn't depend on any specific terminal, and can actually be used without a terminal at all.</p>
+<p>To use, simply download the script, copy it to $PATH and make it executable.
+<a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/copyout">[Download]</a>
+<h5>Licensed under GNU GPLv3.</h5>
+<pre></pre>
+<h4>"switch"</h4>
+<p>This script was found on the <a href="https://suckless.org">suckless</a> website. It allows you to switch between dwm windows quickly and easily through dmenu. I'm not sure who made it but it was poorly written with many bash-isms. I made it POSIX compliant and my version is POSIX compliant.</p>
+<p>To use, Figure it out yourself. If I remember correctly you need to patch dwm with two patches. If you're using my build then it comes with both of those. <a href="https://raw.githubusercontent.com/speedie-de/dmenu-scripts/main/switch">[Download]</a></p>
+<h5>Licensed under: ???</h5>
+<pre></pre>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
