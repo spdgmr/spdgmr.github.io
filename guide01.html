@@ -5,9 +5,9 @@
 <meta name="description" content="This text based, but easy to follow guide goes over upgrading your Gentoo Linux kernel from your existing version to 5.17.0 or later.">
 <meta name="author" content="speedie">
 <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
-<link rel="stylesheet" href="regular.css">
+<link rel="stylesheet" href="css/regular.css">
 <h1>speedie's website</h1>
-<link rel="icon" type="image/png" href="antibloat.png">
+<link rel="icon" type="image/png" href="img/antibloat.png">
 <a href="index.html">🏠 Home</a>
 <a href="projects.html">💾 Projects</a>
 <a href="blog.html">📘 Blog</a>
@@ -15,6 +15,7 @@
 <a href="mailto:speedie@duck.com">📧 Email</a>
 <a href="https://github.com/speedie-de">🐧 Dotfiles</a>
 <a href="rss.xml">📰 RSS</a>
+<a href="donate.html">💰Donate</a>
 </a>
 </div>
 <hr>
@@ -26,18 +27,18 @@
 <p>First, let’s use the su command to change our user to root since many commands will require root permissions. You could use sudo/doas for each command but that’s painful.</p>
 <p>Now, one pretty unstable way to do this is to simply have ACCEPT_KEYWORDS="~amd64" in /etc/portage/make.conf but this is not stable and will ALWAYS allow “untested” packages to be installed on your system. I and others prefer this but it’s not something you should use if you care about a stable system. Now, one pretty unstable way to do this is to simply have ACCEPT_KEYWORDS="~amd64" in /etc/portage/make.conf but this is not stable and will ALWAYS allow “testing” packages to be installed on your system. I and others prefer this but it’s not something you should use if you care about a stable system.</p>
 <p>So instead, let’s individually unmask this package. Create /etc/portage/package.unmask and add sys-kernel/gentoo-sources to the file</p>
-<img src="guide-01-img-1.png" alt="image">
+<img src="img/guide-01-img-1.png" alt="image">
 <p>Now, your sources are likely outdated so we will need to update them. To do this, run emerge --sync; emerge-webrsync</p>
 <p>Once we’ve synced our repositories, let’s try running emerge --ask gentoo-sources. If the version is 5.17.0 or later then you’ve correctly unmasked and synced your repositories.</p>
-<img src="guide-01-img-2.png" alt="image">
+<img src="img/guide-01-img-2.png" alt="image">
 <p>Now emerge this and wait.</p>
-<img src="guide-01-img-3.png" alt="image">
+<img src="img/guide-01-img-3.png" alt="image">
 <p>Once the emerge is complete it’s time to back up our kernel configuration. cd /usr/src/linux and cp <kernel> /home/<user> where <kernel> is the name of your kernel config and <user> is your user account. You don’t have to back it up to this place but you need a backup of your kernel configuration unless you wanna configure a new one. Now cd /home/<user>.</p> 
 <p>Now that we have a backup of our previous configuration, it’s time to change our symlink. Run eselect kernel list</p>
-<img src="guide-01-img-4.png" alt="image">
+<img src="img/guide-01-img-4.png" alt="image">
 <p>Now that we have a backup of our previous configuration, it’s time to change our symlink. Run eselect kernel list</p>
 <p>Then run eselect kernel set <number> where <number> is the number of the kernel you will be using (should be 5.17.0)</p>
-<img src="guide-01-img-5.png" alt="image">
+<img src="img/guide-01-img-5.png" alt="image">
 <p>cd /usr/src/linux; cp /home/<user>/<kernel> /usr/src/linux/.config; make olddefconfig.</p>
 <p>This string of commands will copy the kernel config to the 5.17.0 kernel directory. The make olddefconfig will use your old kernel and set the new settings newer kernels offer to the defaults. This should be fine unless you NEED to change them.</p>
 <p>Once this is complete, make sure your /boot is mounted and then run make -j$(nproc); make install to compile the kernel and copy it over to your /boot partition.</p>
