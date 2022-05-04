@@ -34,37 +34,44 @@
 </ul>
 <h3>Usage</h3>
 <p>xshbar must be used with a window manager that supports xsetroot and xsetroot must be installed. First install xsetroot and then make sure your window manager supports xsetroot.</p>
-<p>Once you&#39;re sure it does, add ~/.config/xshbar/xshbar &amp; to ~/.xinitrc</p>
+<p>Once you&#39;re sure it does, add xshbar &amp; to ~/.xinitrc</p>
 <p>Now follow Basic Editing</p>
 <h3>Basic Editing</h3>
-<p>In order to use xshbar, it needs to have something to print. With xshbar this is done using plugins. A few come bundled with xshbar but not all.</p>
-<h5>cd ~/.config/xshbar/plugins</h5>
-<p>and then you will be able to see all available plugins. Let&#39;s say we want date.plugin.</p>
-<h5>cp date.plugin ../plugins.use</h5>
-<p>You can now vim into that file and see all of its variables. We can mention these in the file we&#39;re about to edit.</p>
-<h5>cd ~/.config/xshbar &amp;&amp; vim prn</h5>
-<p>prn is the file which contains what we will be printing.</p>
-<p><img src="https://user-images.githubusercontent.com/71722170/162231229-0ebaabc9-9e12-4ba1-bc15-cc17542fd92c.png" alt="image"></p>
-<p>This is an example of what it can print. You can type plain text in XSHBAR_CORE_DISPLAY or specify a variable using $<myvariable>
-You can also print the output of a command by using </p>
-<p>$(echo foo)</p>
-<h5>vim ~/.config/xshbar/xshbar</h5>
+<p>In order to use xshbar, it needs to have something to print. With xshbar this is done using plugins. You don't <i>need</i>to use plugins but they make your life way easier.</p>
+<p>xshbar no longer comes with plugins so if you want a plugin, you will have to download some.</p>
+<p>Plugins can be found later down this wpage.
+<h5>cd ~/.config/xshbar</h5>
+<p>and then you will be able to see all xshbar configuration files. Let&#39;s say we want xshbar to display our hostname. (There is a plugin but this is without using one)</p>
+<h5>If this is the case, edit 'prn' and change the contents of the XSHBAR_CORE_DISPLAY variable. For example to view the hostname, it should contain <code>$(</etc/hostname)</code>.</h5>
+<p>Basically you can also print the output of a command by using <code>$(echo foo). Many plugins rely on this feature. Plugins really exist to save system resources and make the process easier.</code></p>
+
+<h3>How to use plugins</h3>
+<p>Plugins are extremely powerful in xshbar. With xshbar you can display anything you could imagine with enough effort. You can of course write your own but xshbar already has a repository of user-made plugins written for it.</p>
+<p>You can find user-made plugins later down this page.</p>
+<p>Before you can use the variables user-made plugins provide, you need to enable them. You could think of this as <code>#include</code> in C or the <code>source</code command in Bash.</p>
+<p>To do this, make sure your plugins are in ~/.config/xshbar/plugins.use. This directory contains all user-made plugins.</p>
+<p>Now, all you need to do is enable them. Edit your xshbar script. If you used <code>make install</code> to install it, it should be in /usr/bin.</p>
+<p>Once you're in the file, you'll want to add a plugin inside the <code>XSHBAR_IMPORT</code> function. For example, to add a plugin named testplugin.plugin, add the following line:</p>
+<p><code>. $PLUGDIR/testplugin.plugin</code></p>
 <p><img src="https://user-images.githubusercontent.com/71722170/162249304-d0c9dd0e-a4aa-4757-bc97-7aee71717084.png" alt="image"></p>
-<p>Add your plugins to XSHBAR_IMPORT() like shown in the screenshot above.</p>
-<p>When you&#39;re done, save the file, and kill your X session and startx. Enjoy!</p>
-<h3 id="plugins">Plugins</h3>
-<p>Default plugins aren&#39;t enough for you? Fear not because there are more plugins available for you to grab.
-See <a href="xshbar-plugins.html">this</a> page for more information.</p>
+<p>Finally, look at the plugin and determine what variables it provides. These can be used in the 'prn' file we edited earlier.</p>
+
+<h3>User-made plugins</h3>
+<p>You can find a bunch of plugins <a href="xshbar-plugins.html">here.</a></p> 
+
 <h3>Credits</h3>
 <ul>
-<li>Me, I am so based</li>
+<li>speedie</li>
 <li>You (thanks for using this)</li>
 <li>Possible contributors.</li>
 </ul>
 <h3>License</h3>
-<p>xshbar is licensed under the MIT license. The GitHub repository contains a LICENSE file which you can read if you&#39;re not sure what terms apply to your usage of this software.</p>
+<p>xshbar is licensed under the GNU GPLv3 license. The GitHub repository contains a LICENSE file which you can read if you&#39;re not sure what terms apply to your usage of this software.</p>
 <h3>NOTE</h3>
 <p>Please be very careful and look through plugins before adding them to plugins.use. Some plugins may be malicious and delete or steal user data or break your system.</p>
+
+<h3>Support this project</h3>
+<p>To support this project, <a href="donate.html">please consider donating</a>. You don't have to but it would be greatly appreciated!</p>
 
 </body>
 <footer>
