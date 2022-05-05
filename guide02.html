@@ -1,0 +1,236 @@
+<head>
+<div class="header">
+<title>Guide: Installing Arch Linux (The chad way) // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="In this short text-based guide I will be going over a full Arch Linux install. I will also be going over installing dwm, the window manager but you can of course install any window manager you want. I try to explain everything carefully so that anyone can follow this guide. I do not recommend installing Arch Linux with no Linux experience, however.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<link rel="stylesheet" href="css/guide.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+<a href="donate.html">💰Donate</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>Guide: Installing Arch Linux (The chad way)</h2>
+<img src="img/guide-02-img-1.png" alt="image">
+<h4>2022-05-05</h4>
+<p>This simple to follow guide for chads will be going over an Arch Linux installation. We will also be going through setting up a window manager and X environment so that you can actually use it.</p>
+<p>Before you get started, I'd like to explain why you should install Arch Linux and I'd also like to warn you that you're going to do this at your own risk. I'm not responsible for any data loss caused by this guide.</p>
+<p>Once you've taken a deep breath and understand the risks, let's get started with installing Arch Linux.</p>
+<p>First step is to make sure you meet the requirements below.</p>
+<ul>
+		<li><h5>64-bit machine with Intel/AMD processor.</h5></li>
+		<li><h5>USB drive with at least 1GB of storage.</h5></li>
+		<li><h5>Patience.</h5></li>
+		<li><h5>Reasonable amount of Linux experience.</h5></li>
+		<li><h5>Responsibility for your own actions. (You're installing, not me)</h5></li>
+</ul>
+<p>Before we get started, why would you want to install Arch Linux?</p>
+<ul>
+		<li><h5>Pacman, Arch's package manager is better than most other distros.</h5></li>
+		<li><h5>Arch is a minimalist Linux distribution. This means you get to pick everything that get installed. This prevents you from having a bloated system.</h5></li>
+		<li><h5>"I use Arch btw" So you can brag about it.</h5></li>
+</ul>
+<p>I will be installing in a virtual machine but the steps are identical. Just a few minor differences that I will be explaining later on.</p>
+<h4>Part 1: Creating the USB drive</h4>
+  <p>First, let's head over to the <a href="https://archlinux.org">Arch Linux</a> website and download the latest ISO.</p>
+  <img src="img/guide-02-img-2.png" alt="image">
+  <p>If you've already got an ISO, you don't need to download a new once since we will be using the <code>pacstrap</code> command anyway which will download the latest packages.</p>
+  <p>You can choose how to download the ISO. I prefer using the torrent because:</p>
+<ul>
+		<li><h5>It tends to be faster</li></h5>
+		<li><h5>It saves their bandwidth</li></h5>
+</ul>
+  <p>If you don't have a torrent client set up, just download the ISO using your web browser. Arch Linux will not come to your house asking for money, don't worry.</p>
+  <p>Now that we have your ISO file it's time to write it to a USB drive.</p>
+  <p>If you're going to be installing in a VM then you can skip this part since you can boot directly off the ISO.</p>
+<h3>Creating the USB drive (Windows)</h3>
+  <p>To create the USB drive on Windows, you can use the free software tool "Rufus".</p>
+  <img src="img/guide-02-img-3.png" alt="image">
+  <p>(Not my image, I don't use Microhard Binbow$ which steals all my data)</p>
+  <p>Rufus looks something like this. You'll want to select the Arch Linux image. Then select whether your computer supports UEFI/BIOS.</p>
+  <p>Most modern machines released ~2012 or later should support UEFI. If you use an Intel Mac from 2007-2019 then you'll want UEFI (EFI). If you're unsure you can go with the default option (BIOS) since it supports both.</p>
+  <p>Then just write it. There are other ways to write on Windows such as using WSL with 'dd' which you can do or by using balenaEtcher (Which you shouldn't be using since it's not free software, it's open source spyware which is extremely bloated and uses Electron)</p>
+<h3>Creating the USB drive (Linux/macOS)</h3>
+  <p>On Linux or macOS, writing the image is a lot easier. We're going to do this from the command line without installing any additional software using the <code>dd</code> command.</p>
+  <p>Make sure your Linux/macOS box is able to run commands as root (ie. sudo/doas). Finally, make sure you have the Arch Linux ISO.</p>
+  <p>To write it, fire up a terminal (I use st) and change your user to root using the <code>su</code> command.</p>
+  <p>Now, to check what devices are available on your system, run <code>lsblk</code>. Make note of the devices and make sure to not pick the wrong one. If you do then you WILL lose data.</p>
+  <p>I'm pretty sure macOS won't let you erase your drives due to SIP but this command is nicknamed 'disk destroyer' for a reason. PLEASE be careful when using it.</p>
+  <p>Now, <code>lsblk</code> should return something like this.</p>
+  <img src="img/guide-02-img-4.png" alt="image">
+  <p>If you're on macOS, it's going to be diskXsY instead of sdXY.</p>
+  <p>Now, run the command <code>dd if=X of=Y</code> as root <b>where X is the path to your Arch Linux ISO and Y is your drive (For example, /dev/sdb).</b></p>
+  <p>Be extremely careful and hope you didn't enter the wrong drive.</p>
+  <p>If you did, then I feel slightly bad for you because you may have just lost your massive collection of anime porn.</p>
+  <p>Now, the <code>dd</code> command will by itself not output anything. But be patient and <b>do not close down your terminal</b>.</p>
+  <p>Once you can enter commands into your terminal and see your prompt, it's all done and you can reboot your computer.</p>
+<h4>Part 1.5: Booting from the USB drive</h4>
+  <p>Now that we have a USB drive, we need to use it. Stick it into your soon-to-be Arch box and reboot/power it on. You'll need to get into your BIOS/UEFI. If you have enough computer knowledge to get into the BIOS then you can follow on with the guide. Simply boot from the USB. Else, simply go back to using Windows like a normie, this guide is for chads only.</p>
+  <p>Also while you're at it, take your computer to the Microsoft Store and ask them to fix it for you.</p>
+  <p>Now, let's continue.</p>
+<h4>Part 2: Partitioning</h4>
+  <p>Now, let's install Arch Linux. Upon booting, you should see something like this</p>
+  <img src="img/guide-02-img-5.png" alt="image">
+  <p>Simply press enter on the first option UNLESS you have specific needs.</p>
+  <p>The second option is good if you're blind and need speech.</p>
+  <p>The third option is good if you only have one USB port but need another for.. say a USB WIFI dongle. This will allow you to remove your USB drive and run the installer from your RAM.</p>
+  <img src="img/guide-02-img-6.png" alt="image">
+  <p>Once it's done booting from the USB you'll see this fancy message. It tells you to RTFM but obviously since you're reading <i>my guide</i> you're too based for that.</p>
+  <p>It also tells you that there's a fancy """EASY JUST WERKS""" Arch installer but it's really just harder.</p>
+  <p>Now, run <code>lsblk</code> to see how many drives you have and their <b>NAME</b>.</p>
+  <img src="img/guide-02-img-7.png" alt="image">
+  <p>From my image, we can tell that <i>sda</i> is my only drive. So this is the one we will be installing Arch Linux to.</p>
+  <p>Now, run <code>cfdisk /dev/sdX</code> where X is your drive NAME.</p>
+  <img src="img/guide-02-img-8.png" alt="image">
+  <p>Then you'll get a few options.</p>
+  <ul>
+		<li><p>If your machine supports UEFI and you want to use GPT then pick GPT.</p></li>
+		<li><p>If your machine only supports BIOS or you want to use MBR then pick MBR.</p></li>
+  </ul>
+  <p>The other options are completely irrelevant for us.</p>
+  <img src="img/guide-02-img-9.png" alt="image">
+  <p>If you picked MBR then it's going to look slightly different. You will have a <i>bootable</i> option which.. makes your partition bootable. You will want to have this selected for your boot partitions.</p>
+  <p>Other than that, you can follow along.</p>
+  <p>Press enter on [NEW] and enter how big your boot partition should be. This is where your kernel, initramfs and bootloader is going to be. For this guide we will be using Grub but there are other bootloaders that can be used with Arch Linux. You might choose to use the systemd bootloader since it comes with your init system.</p>
+  <img src="img/guide-02-img-10.png" alt="image">
+  <p>A good size unless you'll have many kernels is 128MB. If you need more, I'd go up to 256MB. More than that is probably not necessary.</p>
+  <p>If you're using EFI then set the Type to 'EFI system'. Otherwise leave it as default.</p>
+  <p>Now it's time to add Swap. If you have 8GB or more RAM then you probably don't need swap. How much swap you wanna add is fully up to you. I prefer having no swap personally.</p>
+  <p>Again press enter on [NEW] and set the size to however much swap you have. I'd recommend double your RAM unless you have a lot of RAM in which case you probably don't need swap anyway.</p>
+  <p>The type for swap should be 'Linux swap'.</p>
+  <p>I won't be setting swap because I think it's useless.</p>
+  <p>Now unless you have specific needs such as having a separate /home partition or something, we can allocate the rest to our root partition.</p>
+  <p>The [Type] for your root partition should be 'Linux filesystem'. Once you're sure it all looks correct, you can [Write] the changes.</p>
+  <p>Here's what a setup might look like.</p>
+  <img src="img/guide-02-img-11.png" alt="image">
+<h4>Part 2.5: Creating file systems and mounting</h4>
+  <p>This part is really easy. We need to begin by again running <code>lsblk</code>.</p>
+  <img src="img/guide-02-img-12.png" alt="image">
+  <p>In my case, /dev/sda1 is our /boot partition and /dev/sda2 is our root partition</p>
+  <p>Now, we need to decide what file system to use. I recommend either <i>ext4</i> or <i>BTRFS</i>. I will personally be going with BTRFS.</p>
+  <p>We also need a file system for our boot partition. I will be using <i>FAT32</i> aka <i>VFAT</i> for this.</p>
+  <ul>
+		<li><h5>To create a FAT32 file system, run <code>mkfs.vfat -F 32 /dev/sdXY</code> where X is your drive and Y is your partition. So in my case, <code>mkfs.vfat -F 32 /dev/sda1</code>.</h5></li>
+		<li><h5>To create a EXT4 file system, run <code>mkfs.ext4 /dev/sdXY</code> where X is your drive and Y is your partition. So in my case, <code>mkfs.ext4 /dev/sda2</code>.</h5></li>
+		<li><h5>To create a BTRFS file system, run <code>mkfs.btrfs -f /dev/sdXY</code> where X is your drive and Y is your partition. So in my case, <code>mkfs.btrfs -f /dev/sda2</code>.</h5></li>
+  </ul>
+  <p>Output of these commands should be something like this:</p>
+  <img src="img/guide-02-img-13.png" alt="image">
+  <p>Now, if you created a swap partition, we'll need to set that up as well.</p>
+  <h5>To create a swap file system, run <code>mkfs.swap /dev/sdXY</code> where X is your drive and Y is your partition.</h5>
+  <p>That wasn't so hard was it? We just created Arch Linux partitions and set them up.</p>
+  <p>With that done, let's mount our drives so we can begin actually installing Arch.</p>
+  <p>To mount your root partition, type <code>mount /dev/sdXY /mnt</code> where X is your drive and Y is your partition.</p>
+  <p>For EFI: Then, to mount your /boot partition, type <code>mkdir /mnt ; mount /dev/sdXY /mnt/boot</code> where X is your drive and Y is your partition. This will create /boot and mount our boot partition to it.</p>
+  <p>If a swap partition was created, type <code>swapon /dev/sdXY /dev/sdXY</code> where X is your drive and Y is your partition.</p>
+  <p>Congratulations, we're done mounting and partitioning your drives. Now, we just need to make sure we have a connection to the internet so we can download our packages.</p>
+  <h4>Part 2.5: Connecting to the internetz</h4>
+  <p> The internetz are useful for two things; Installing Arch Linux and bragging about having installed Arch Linux</p>
+  <p>If your computer is connected using Ethernet, it should <i>just work</i> with absolutely no setup required. If you are using WIFI then it will not work out of the box.</p>
+  <p>To set up WIFI on your Arch box, type <code>iwctl station list</code>. Make note of the output. For example, it may be <code>wlan0</code> or <code>wlan1</code>.</p>
+  <p>Once you're sure which device it is, type <code>iwctl station 'station' connect SSID</code> where <code>station</code> is the WIFI device we got earlier and SSID is the name of your WIFI network.</p>
+  <p>Press enter and type in the password your network has. If it doesn't ask you for a password then it probably doesn't need one or you entered the wrong SSID.</p>
+  <h4>Part 3: Installing base system</h4>
+  <p>Now we're connected to the internet. How fancy is that? To actually use this, we need to install some packages. This would normally be pretty painful but Arch Linux has a command called <code>pacstrap</code> which will basically do the entire process for us. Arch Linux also offers a few bundles of packages like <code>base</code> and <code>base-devel</code> which contain essential packages.</p>
+  <p>Now, to install packages to our Arch system, we'll need to decide what packages to use. <code>base</code> is basically essential. It contains the base Arch Linux system. Then, if you're going to be using development tools (Required for compiling dwm which we'll do later on) then you'll also want to install <code>base-devel</code>. Keep in mind this also comes with Sudo which you might not want (I certainly don't). But these can later easily be removed using <code>pacman -R <package></code></p>
+  <p>Now, we need a kernel. The Linux kernel is obviously what we want since it's Arch <i>Linux</i>. There are many different variations of the Linux kernel. You can run <code>pacman -Ss linux</code> to see all that are available in the Arch Linux repositories. Here is a small list of them.</p>
+  <ul>
+     <li><h5>linux</h5></li>
+	     <h5>The standard Arch Linux kernel.</h5>
+     <li><h5>linux-hardened</h5></li>
+	     <h5>Kernel optimized for Security.</h5>
+     <li><h5>linux-zen</h5></li>
+	     <h5>Linux kernel optimized for speed.</h5>
+  </ul>
+  <img src="img/guide-02-img-15.png" alt="image">
+  <p>If your hardware configuration requires proprietary blobs then you'll also wanna add the <code>linux-firmware</code> package.</p>
+  <p>If you're going to use WIFI then you'll want to add <code>iwd</code> to your list. There are other ways to manage WIFI but <code>iwd</code> is the one we used during Part 2.5 and it's also the easiest to set up.</p>
+  <p>If you're going to use Ethernet, you'll need some way to manage networks. I tend to just install <code>dhcpcd</code> though but you can use <code>NetworkManager</code> or something if you want</p>
+  <p>You'll also need some way to edit text. The <code>base</code> package might come with Nano or something but Nano is unusable so we're gonna install <code>vim</code> as well.</p>
+  <p>You can use something else like <code>nano</code> or <code>pico</code> to edit your text but they're terrible text editors that only people who wanna make their life harder use.</p>
+  <p>Finally, we'll need our bootloader which for this guide will be <code>Grub</code>. If you're going to be dual-booting then you'll also want the <code>os-prober</code> package. If you're on an EFI system then you'll want the <code>efibootmgr</code> package.</p>
+  <h4>Now, our package list looks like this: <code>base base-devel linux linux-firmware dhcpcd grub efibootmgr vim</code></h4>.
+  <h4>And the command we wanna run is: <code>pacstrap /mnt base base-devel linux linux-firmware dhcpcd grub efibootmgr vim</code>.</h4>.
+  <img src="img/guide-02-img-14.png" alt="image">
+  <p>Wait unless the command finishes installing packages to your new root</p>
+  <h4>Part 3.5: Creating an fstab</h4>
+  <p>Arch Linux requires an fstab to boot. An fstab is really just a file with a list of partitions to mount and how to mount them.</p>
+  <p>Writing one manually isn't hard but Arch Linux made it easier by including a nice command called <code>genfstab</code>.</p>
+  <p>All we need to do is run <code>genfstab -U /mnt > /mnt/etc/fstab</code></p>
+  <p>The <code>-U</code> flag uses UUIDs instead of the disk identifier. This is important to make sure our fstab is always correct.</p>
+  <p>The <code>></code> points it to /mnt/etc/fstab.</p>
+  <p>Now, finally we need to chroot into our new root. Do this by running <code>arch-chroot /mnt</code>.</p>
+  <h4>Part 4: Setting time zone and locale</h4>
+  <p>Now that we're in our new root we need to set our timezone and then locale.</p>
+  <p>First, run <code>ls /usr/share/zoneinfo</code></p>
+  <p>Then run that previous command but with your region. In my case Europe. <code>/Europe</code></p>
+  <p>Finally, run <code>ln -sf /usr/share/zoneinfo/Region/City /etc/localtime</code> where Region is.. your region (for example Europe) and where City is your city. (for example Stockholm).</p>
+  <p>Now, you'll want to edit /etc/locale.gen. Uncomment the locale you need. Edit it using your editor of choice, for example <code>vim /etc/locale.gen</code>. For en_US, uncomment <code>en_US.UTF-8 UTF-8</code>. You can use </code>/</code> to quickly find text in Vim. For example, <code>sv_SE.UTF-8 UTF-8</code> would be the locale for Sweden.</p>
+  <h4>Part 4.5: Setting your hostname</h4>
+  <p>Now we need to set our hostname. To do this, run the following command. Replace <code>archbox</code> with what you want your hostname to be. <code>echo "archbox" > /etc/hostname</code>.
+  <h4>Part 5: Installing a bootloader</h4>
+  <p>In order to boot Arch Linux after we're done installing, we need to install a bootloader. If you followed this guide exactly as it's written you should have Grub as your bootloader.</p>
+  <h5>For GPT users</h5>
+  <p><code>grub-install --target=x86_64-efi --efi-directory=/boot ; grub-mkconfig -o /boot/grub/grub.cfg</code></p>
+  <h5>For MBR users</h5>
+  <p><code>grub-install /dev/sdX</code> where X is your drive.</p>
+  <h4>Part 5.5: Enabling services and setting your root password</h4>
+  <p>Enable the services. If you installed dhcpcd, run <code>systemctl enable dhcpcd</code>. If you installed iwd, run <code>systemctl enable iwd</code>. Now, the final part before we can reboot and begin setting up our Arch Linux box. Setting the root password. By default, the root password isn't set so you can't actually log in. You can set it yourself by running the <code>passwd</code> command. Once you've set the password, it's time to reboot. To do this, simply type <code>exit</code> to exit the chroot environment and then <code>reboot</code> to reboot the system.</p>
+  <h4>Part 6: Setting up users and permissions</h4>
+  <img src="img/guide-02-img-16.png" alt="image">
+  <p>Now that we've got a base Arch Linux install set up, log in as <code>root</code> with the password you set earlier.</p>
+  <p>Once you're logged in, run <code>useradd -mG wheel,audio,video,users user</code> where user is your user name. I will name my user 'speedie'.</p>
+  <p>The <code>-m</code> flag creates a home directory for the user. The <code>-G</code> flag will add it to the groups. wheel is the group that we will allow <code>sudo</code> or <code>doas</code> to give root access to. <code>audio</code> will allow us to use ALSA (Advanced Linux Sound Architecture) for audio. <code>video</code> will allow us to start an X session. <code>users</code> is a group all users should be in.</p>
+  <p>Now let's set his/her password by running <code>passwd user</code> where user is the account we created. Once you have access to this account you can set the <code>root</code> account password to random text if you want security.</p>
+  <p>If you wanna use <code>sudo</code>, you can do so by editing <code>/etc/sudoers</code> using your favorite editor.</p>
+  <img src="img/guide-02-img-17.png" alt="image">
+  <p>Above is an example of how to set up <code>sudo</code>
+  <p>If you installed <code>base-devel</code> then <code>sudo</code>is already installed. Otherwise you can install it if you want.</p>
+  <p>I will be using <code>doas</code> instead however because <code>sudo</code> is more bloated than it needs to be.</p>
+  <p>If you wanna use <code>doas</code>, you can install it using <code>pacman -Sy doas</code>.</p>
+  <p>To set up <code>doas</code>, simply run <code>echo "permit :wheel" > /etc/doas.conf</code> or alternatively <code>echo "permit nopass :wheel" > /etc/doas.conf</code> if you don't want to enter your password every time you try to run a command as root. It's not very secure but I personally prefer it.</p>
+  <p>Now that we have set up our account and permissions, run <code>exit</code> and log in with your new account.</p>
+  <h4>Part 7: Setting up dwm</h4>
+  <p>Let's set up Xorg and then the window manager which will be <a href="https://dwm.suckless.org">dwm</a>. Start by installing Git. Do this by running <code>pacman -S git libXinerama</code>. libXinerama will be used to compile dwm with support for multiple monitors. We also need libXft but we will be installing libXft-bgra since otherwise dwm will crash if it sees a color emoji.</p>
+
+  <p>Run <code>cd</code> to change directory to ~. Now we can <code>mkdir -pv .config</code> and <code>cd .config</code>.<p>
+  <p>Before we can install dwm, we need libXft. To do this, run the following command <code>git clone https://aur.archlinux.org/libxft-bgra ; cd libxft-bgra ; makepkg -i</code>. This will install libXft-bgra. Now you can go ahead and cd back into ~/.config.</p>
+  <p>If you've already got a build of dwm, go ahead and clone that instead. If you don't, <code>git clone https://git.suckless.org/dwm ; cd dwm</code>. Now that we're inside the dwm source code, simply run <code>make clean install</code> as root. This should install dwm. If you're using my build you also need <code>imlib2</code> and <code>harfbuzz</code>.</p>
+  <p>You'll also likely want <code>dmenu</code> for our run launcher and <code>st</code> for our terminal. Otherwise you'll need to edit the dwm source code.</p>
+  <p>To install dmenu, <code>cd ~/.config ; git clone https://git.suckless.org/dmenu ; cd dmenu ; doas make clean install</code>.</p>
+  <p>To install st, <code>cd ~/.config ; git clone https://git.suckless.org/st ; cd st ; doas make clean install</code>.</p>
+  <h4>Part 8: Setting up Xorg</h4>
+  <p>The 8th and final part of this guide; setting up Xorg.</p>
+  <p>First, run <code>pacman -S xorg-server xorg-xinit xf86-input-libinput</code> as root. This will install our server, xinit and xf86-input-libinput necessary to use our keyboard and mouse with Xorg. Then also run <code>pacman -Ss xf86-video</code> as root and look at the output. You don't technically need xorg-xinit, you can use sx which I covered in my RSS post. However it's not very good for new users and not very well documented so I suggest you use xinit.</p>
+  <img src="guide-02-img-18.png" alt="image">
+  <p>These are display drivers. You'll want to install the one you need. If you're in a VM like me, it's <code>xf86-video-vmware</code> for VirtualBox or VMware and <code>xf86-video-qxl</code> for QEMU/KVM. These are correct for everyone except <strong>nvidia</strong> users who will want the <code>nvidia</code> package instead. Run it for yourself and install the driver you need.</p>
+  <p>We need to set up <code>xclip</code> for our clipboard and <code>picom</code> for our compositor. You can also choose to install <code>xorg-xrdb</code> if your software supports .Xresources however I will not be covering that in this guide.</p>
+  <p>You can do this by running <code>pacman -S xclip picom</code> as root.</p>
+  <p>Finally, let's edit our <code>.xinitrc</code> file. This file will run every time you run the command <code>startx</code>.</p>
+  <p><code>vim ~/.xinitrc</code></p>
+  <p>Now add these three lines to the file:</p>
+  <h5>picom &</h5>
+  <h5>xclip &</h5>
+  <h5>dwm</h5>
+  <p>Then save the file using ':wq' and run <code>startx</code>. That should be everything. If you did it correctly you should be in dwm. If it fails to start then you're probably missing fonts. I suggest installing <code>terminus-font</code>. It's a nice font.</p>
+  <img src="img/guide-02-img-19.png" alt="image">
+  <p>Now you can install <code>maim</code> and <code>neofetch</code> so you can brag about having installed Arch on r/unixporn or whatever. Thanks for reading this guide, I hope it helped you set up Arch Linux. Have a good day!</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
