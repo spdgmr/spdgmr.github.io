@@ -61,9 +61,11 @@ h4 {
 h5 {
   color: #4ab4f4;
   margin-bottom: 0px;
-  padding: 0.5em;
+  padding: 0em;
+  padding-left: 5px;
   padding-right: 0px;
   padding-bottom: 0px;
+  font-size: 15px;
 }
 
 p {
@@ -98,11 +100,11 @@ a {
 
 li {
   color: #bbbbbb;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   padding-bottom: 0px;
   padding-left: 5px;
   padding-right: 0px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 ul {
@@ -196,9 +198,11 @@ h4 {
 h5 {
   color: #009fff;
   margin-bottom: 0px;
-  padding: 0.5em;
+  padding: 0em;
+  padding-left: 5px;
   padding-right: 0px;
   padding-bottom: 0px;
+  font-size: 15px;
 }
 
 p {
@@ -233,11 +237,11 @@ a {
 
 li {
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   padding-bottom: 0px;
   padding-left: 5px;
   padding-right: 0px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 ul {
@@ -250,8 +254,8 @@ ul {
 }
 
 code {
-  background-color: #7a9eff;
-  padding: 0.5em;
+  background-color: #ffffff;
+  padding: 0em;
   padding-bottom: 0px;
   padding-right: 0px;
 }
