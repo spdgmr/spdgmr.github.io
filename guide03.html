@@ -1,0 +1,51 @@
+<head>
+<div class="header">
+<title>Guide: Upgrading Suckless software (gigachad edition) // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="In this guide I tell you how to upgrade Suckless software like dwm, st, dmenu, surf, etc. to a new version without starting from scratch.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<link rel="stylesheet" href="css/guide.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+<a href="donate.html">💰Donate</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>Guide: Upgrading Suckless software (gigachad edition)</h2>
+<h4>2022-05-09</h4>
+<p>In this guide I tell you how to upgrade Suckless software like dwm, st, dmenu, surf and more to a newer version without abandoning your fork and starting from scratch.</p>
+<p>I'm not sure if I'm the only one who's used this method but it works great. It even works if you have 30+ patches like I had with my build of dwm. I was still able to easily upgrade from 6.2 to 6.3 in around 10 minutes.</p>
+<p>First, create a directory anywhere on your system. I created mine in my home directory. Then open a web browser and navigate over to the <a href="https://suckless.org">suckless</a> website.</p>
+<p>Then select the software you're using. For this guide I will be using dwm. Now copy the link to the latest tarball and open up a terminal and change directory into the new folder.</p>
+<p>Download the latest tarball using the <code>wget</code> command. Now download the tarball for the release <i>your</i> build of dwm is on. You can see this by looking at <code>config.mk</code>. It has a version variable at the top which is the version of the software you're on.</p>
+<img src="img/guide-03-img-1.png" alt="image">
+<p>Now, you can unpack both of these tarballs using <code>tar -xpvf tarball</code>.</p>
+<img src="img/guide-03-img-2.png" alt="image">
+<p>If you did it correctly you should have two folders with two different versions.</p>
+<p>In my case, there's <code>dwm-6.2</code> and <code>dwm-6.3</code>. Now, what we're going to do is create a patch that we can apply to our riced fork of (in this case) dwm.</p>
+<p>In this case you can do this by running <code>diff -up dwm-6.2 dwm-6.3 > dwm-patch.diff</code>. Obviously change the names if yours are different. If we run this command we should get a patch. We can apply this to any dwm build which is exactly what we're going to do.</p>
+<p>Copy the .diff to your dwm/st/whatever source code folder and then change directory into it.</p>
+<img src="img/guide-03-img-3.png" alt="image">
+<p>Now, run <code>patch < patch1.diff</code> where patch1.diff is your patch. If you're on a relatively clean build, it should apply just fine. If it doesn't, you'll want to manually add in the chunks. If you're not familiar with patching then it may be slightly difficult for you. What you'll want to do is look at the .rej files and copy them into the regular files. Once you're sure everything looks good and it patched properly then you can go ahead and <code>make clean install</code> as root.</p>
+<img src="img/guide-03-img-4.png" alt="image">
+<p>As you can see, it compiled just fine and if you look at the <code>config.mk</code> you'll see that we've suck-less-ly upgraded our dwm version from 6.2 to 6.3. Again, this can be applied to any of their software.</p>
+<p>Hope this guide helped you out. If it did, feel free to share it around or <a href="donate.html">donate some Monero</a>.</p>
+<p>Have a great day suckless chad!</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
