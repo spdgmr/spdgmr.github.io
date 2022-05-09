@@ -1,0 +1,184 @@
+<head>
+<div class="header">
+<title>Project 081 Installation Guide // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="Project 081 Installation Guide. This guide will be going through a full installation of Project 081 on your Late 2007 or Early 2008 Apple Mac. After this guide is finished, you will end up with a usable system.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/project081.png">
+<a href="">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="donate.html">💰Donate</a>
+<a href="rss.xml">📰 RSS</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h1>Project 081 Installation Guide</h1>
+<p><strong>You've reached the Installation Guide. By following this guide you'll find out how to install Project 081 on your Late 2007 or Early 2008 Macs. After this guide, if all went well you should have a fully working Mac running 10.4.10 Tiger</strong></p>
+<h4>WARNING: This guide is ONLY valid for Project 081 0.5 (current version as of 2022-03-22), if you're running 0.6 and this guide hasn't been updated yet, please do not follow along unless necessary.</h4>
+<h4>This guide DOES NOT cover custom images. If you wish to use a custom image then follow the other guide. </h4>
+<h1>The guide starts here.</h1>
+<h3><strong>Pt. 1: Making sure you have everything</strong></h3>
+<p>In order to follow the guide you must have:</p>
+<ul>
+<li>A Late 2007 or Early 2008 Apple Mac.</li>
+<li>A USB drive or a DVD (2GB or larger, only tested with a 16GB USB drive)</li>
+<li>An internet connection</li>
+<li>Time and patience (You know, just in case)</li>
+<li>Second machine running Windows/Mac OS X/Linux (Highly recommended)</li>
+<li>Web browser (Even links will do)</li>
+</ul>
+<h3><strong>Pt. 2: Understanding the Risks</strong></h3>
+<ul>
+<li>Data loss can happen if you format the wrong partition. </li>
+<li>Tiger doesn't really like Windows or GNU/Linux EFI partitions and will sometimes break them so we highly recommend that you install Windows or GNU/Linux on a separate drive. If you must run Windows or GNU/Linux on the same drive make sure to back up your data, and be ready to reinstall Windows or GNU/Linux. unless you at least redeploy your bootloaders. </li>
+<li>General security things, Mac OS X Tiger has not been updated and supported since 2009 so there are some risks</li>
+<li>Bad luck causing your machine to 'reject' the install. It has happened to a few people and the cause is not known.</li>
+<li>Project 081 is not an official product by Apple and 'can' therefore be filled with malicious software (Although you can check for yourself). However the entire operating system is proprietary as Apple made it that way. It's likely a botnet anyway.</li>
+<li>The people behind Project 081 will not take any responsibility for any data loss, dead machines or any reason not listed here. This software is simply provided to you for free and it's your responsibility to use it correctly.</li>
+</ul>
+<h3><strong>Pt. 3: Getting Started</strong></h3>
+<p>Make sure you know what Mac you have. Do this by running sysctl hw.model. Results should be one of the following:</p>
+<ul>
+<li><h5 id="imac8-1">iMac8,1</h5>
+</li>
+<li><h5 id="xserve2-1">Xserve2,1</h5>
+</li>
+<li><h5 id="macpro3-1">MacPro3,1</h5>
+</li>
+<li><h5 id="macbook3-1">MacBook3,1</h5>
+</li>
+<li><h5 id="macbook4-1">MacBook4,1</h5>
+</li>
+<li><h5 id="macbookpro4-1">MacBookPro4,1</h5>
+</li>
+<li><h5 id="macbookair1-1">MacBookAir1,1</h5>
+</li>
+</ul>
+<p><strong>If the number value is lower than these then your machine can OFFICIALLY run Mac OS X Tiger and therefore doesn't need this (See download section for Mac OS X images)</strong></p>
+<p><strong>If the number value is higher than these then your machine CANNOT run Mac OS X Tiger because the hardware is fully incompatible. Sorry, Apple made it that way. (Although feel free to try)</strong></p>
+<p><strong>If you get nothing back, something is wrong with your OS or machine.</strong></p>
+<p><strong>If you have a MacBookAir1,1: You will not have ANY graphics acceleration which means your OS might run slow. It should still run well because Tiger is lightweight but keep this in mind.</strong></p>
+<p><strong>If you have a MacPro3,1: Your hardware may be unsupported if it was upgraded with components that Tiger doesn't natively support. Make sure to check what hardware you have before installing.</strong></p>
+<p><strong>If you have a Hackintosh: Stop, this is the wrong place for that.</strong>
+Hackintosh users should follow a proper Hackintosh-focused guide such as the official OpenCore installation guide.</p>
+<p>On a computer with a working internet connection and a web browser, check the <a href="p081-downloads.html">Downloads</a> section and download the image your model needs. </p>
+<p><img src="https://user-images.githubusercontent.com/71722170/159522246-63afb4bf-36df-4061-bc85-71b7393d8acb.png" alt="image"></p>
+<p>Make sure you get this right as failing to do so will leave you with a broken OS that may not install. You can download the image with any of the mirrors or with the <code>wget</code> or <code>curl</code> command listed for your download. Do not interrupt or cancel the download and be patient.</p>
+<p>If you're downloading the image on a Mac running Mac OS X, you may wanna try mounting it before writing the image. If it doesn't mount then it's corrupted and you should definitely redownload the image to prevent wasting your time and potentially breaking your Mac/USB drive.</p>
+<h5 id=><strong>At this point, insert your USB drive into the machine you downloaded the image on.</strong></h5>
+<h4 id=>If you wish to burn a DVD instead, you can do so as well but it's unsupported.</h4>
+<p>SD card booting is not supported (Why would one wanna do that anyway)
+Other methods are unsupported, try them at your own risk.</p>
+<h3><strong>Pt. 4: Writing the image</strong></h3>
+<p>Now that we have our image, understand the risks and know the model of our machine, let's continue with the guide by writing the image we just spent our bandwidth on!</p>
+<p>To write the image, you will have many options available to you.
+In this guide, we're showing you how to use two of them, although only recommend the easy method because the second method isn't safe.</p>
+<p><strong>Using balenaEtcher</strong></p>
+<h4>NOTE: If you are heavily against Electron (Chromium) based applications like myself, please do not use this method. balenaEtcher uses Electron so please keep this in mind. balenaEtcher also has telemetry built in.</h4>
+<p>Download balenaEtcher and install it on the machine you downloaded the image to.
+Here are some links you can use to download Etcher</p>
+<p><em>For Windows users:</em></p>
+<h3>(Recommended) Visit the official balenaEtcher website (<a href="https://www.balena.io/etcher">https://www.balena.io/etcher</a>) and download it.</h3>
+<p>You can also download the portable version quickly using this link although it may be outdated:
+<a href="https://github.com/balena-io/etcher/releases/download/v1.5.115/balenaEtcher-Portable-1.5.115.exe?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR">https://github.com/balena-io/etcher/releases/download/v1.5.115/balenaEtcher-Portable-1.5.115.exe?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</a></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.5.115/balenaEtcher-Portable-1.5.115.exe?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</code></p>
+<p><em>For Mac OS X/OS X/macOS users:</em></p>
+<p>(Recommended) Visit the official balenaEtcher website (<a href="https://www.balena.io/etcher">https://www.balena.io/etcher</a>) and download it.</p>
+<p>You can also download the portable version quickly using this link although it may be outdated:</p>
+<p><a href="https://github.com/balena-io/etcher/releases/download/v1.5.115/balenaEtcher-1.5.115.dmg?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR">https://github.com/balena-io/etcher/releases/download/v1.5.115/balenaEtcher-1.5.115.dmg?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</a></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.5.115/balenaEtcher-1.5.115.dmg?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</code></p>
+<p><em>For Linux users:</em></p>
+<p>(Recommended) Visit the official balenaEtcher website (<a href="https://www.balena.io/etcher">https://www.balena.io/etcher</a>) and download it.</p>
+<h5 id="appimages-may-not-work-on-your-distro-">AppImages may not work on your distro.</h5>
+<p>.AppImage AMD64 download:
+<a href="https://github.com/balena-io/etcher/releases/download/v1.5.115/balena-etcher-electron-1.5.115-linux-x64.zip?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR">https://github.com/balena-io/etcher/releases/download/v1.5.115/balena-etcher-electron-1.5.115-linux-x64.zip?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</a></p>
+<p>.AppImage IA32 download:
+<a href="https://github.com/balena-io/etcher/releases/download/v1.5.115/balena-etcher-electron-1.5.115-linux-ia32.zip?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR">https://github.com/balena-io/etcher/releases/download/v1.5.115/balena-etcher-electron-1.5.115-linux-ia32.zip?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</a></p>
+<h5 id="note-debs-only-work-on-debian-based-distributions-">NOTE: .debs only work on Debian based distributions.</h5>
+<p>.deb AMD64 download (Because .AppImage sucks):
+<a href="https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron_1.7.0_amd64.deb">https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron_1.7.0_amd64.deb</a></p>
+<p>.deb IA32 download (Because .AppImage sucks):
+<a href="https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron-1.7.0.x86_64.deb">https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron-1.7.0.x86_64.deb</a></p>
+<h5 id="note-rpms-only-work-on-red-hat-fedora-based-distributions-">NOTE: .rpms only work on Red Hat/Fedora based distributions.</h5>
+<p>.rpm download
+<a href="https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron-1.7.0.x86_64.rpm">https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron-1.7.0.x86_64.rpm</a></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.5.115/balena-etcher-electron-1.5.115-linux-x64.zip?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</code></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.5.115/balena-etcher-electron-1.5.115-linux-ia32.zip?d_id=addce433-fbb8-48c9-a92d-3ab640a0a0ebR</code></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron_1.7.0_amd64.deb</code></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron-1.7.0.x86_64.deb</code></p>
+<p><code>wget https://github.com/balena-io/etcher/releases/download/v1.7.0/balena-etcher-electron-1.7.0.x86_64.rpm</code></p>
+<p>Once you have balenaEtcher installed and working, launch it using your preferred method.
+<strong>NOTE: You may need to format your drive in some cases although Etcher should detect it automatically anyway</strong></p>
+<p>Click 'Select Image' and select the Project 081 image you downloaded earlier. </p>
+<p>Then select your drive (Be careful, you could potentially erase your entire boot drive). Then click 'Flash' and wait while it writes the image to your USB drive and verifies it.</p>
+<p><strong>Method 2: Using the Mac OS X/Linux Terminal</strong></p>
+<p>This method only works for Linux and Mac OS X users (although might work on BSDs). This is also the least bloated option but it can easily cause data loss if you're not familiar with the terminal.</p>
+<p>If you are running a custom kernel (mostly for Gentoo users like myself), make sure you have HFS+ support enabled in your kernel!</p>
+<p><img src="https://user-images.githubusercontent.com/71722170/159519521-bc470d00-c558-49e1-9874-cab4627fa186.png" alt="image"></p>
+<p>Once the disk is no longer mounted, run <code>sudo dd if=/location/p081.dmg of=/dev/diskX</code> to format and write the image to the disk.
+You can see your disks using the <code>lsblk</code> command.</p>
+<p><strong>On Linux systems, it won't be /dev/diskX but /dev/sdX. Please keep this in mind.</strong></p>
+<p><img src="https://user-images.githubusercontent.com/71722170/159521874-7d5233dc-1479-4324-aff6-f3eab60a6bf0.png" alt="image"></p>
+<p><strong>NOTE: Some users may not have sudo available to them. In this case, use <code>su</code> or <code>doas</code> if available.</strong></p>
+<p><em>Again, make sure you get the right identifier as otherwise you'll likely erase the wrong drive. Be VERY careful.</em></p>
+<p>Make sure you wait for the process to finish. <strong>Do not</strong> eject the drive until the image is fully written to the drive. Doing so may cause damage to the drive and will cause corruption.</p>
+<h3 id="-pt-5"><strong>Pt. 5: Installation</strong></h3>
+<p>If you reached this point and didn't fail, you should have a USB drive (Or DVD) containing Project 081
+The hard part is now done, the rest is pretty easy as long as you won't have more issues.</p>
+<p>Make sure your Mac is plugged in, and then insert the USB drive into one of its USB ports.</p>
+<p><strong>NOTE that the official Apple iMac keyboards are known to cause issues when booting from USB devices so plug it into one of the ports on your machine.</strong></p>
+<p>Power on your machine and hold the Option key when powering your machine up. If you don't have an official Apple branded keyboard, it should be the Windows flag key. If you use Linux, this is usually your <strong>Super</strong> key or <strong>Mod</strong> key.</p>
+<p>If you fail this way, try holding Left ALT instead. If you still cannot reach the menu, your keyboard may have a weird configuration. In this case try another keyboard.</p>
+<p>Once in the boot menu, you'll want to pick the USB drive. This option may have the Project 081 logo with a Project 081 label but it may also be named 'EFI Boot' and have a regular hard drive icon.</p>
+<p>If you are not sure which option is correct, unplug any other bootable devices or try booting until you get the right one.</p>
+<p>After pressing enter, you should either see an Apple logo with a spinning wheel or a bunch of text. Both of these are normal. Please be patient and wait while it tries to boot to the Project 081 installer.</p>
+<p>If all went fine, you should see either a window that looks like an installer with a nice message or a blue screen. If you see a blue screen, please wait a moment while it loads the Installer.app</p>
+<p><img src="https://user-images.githubusercontent.com/71722170/159522741-69afb9a3-8293-46c3-97f5-ca73061e98ba.png" alt="image"></p>
+<p>If you're stuck at a blue screen for a long time (10 or more minutes), the installer probably froze, in this case please contact me or add an issue on GitHub.</p>
+<p>At the top of your screen, you should see either a 'Util', 'Utilities' or 'Tools' option. Click this option and then Disk Utility.</p>
+<p>Select your internal or external drive (Install destination) and format it as Mac OS Extended (Journaled)
+Make sure you don't format the wrong drive. The drive should NOT be MBR but GPT.</p>
+<p>Once you're sure you selected the correct drive (You may need to format the entire drive, not just a partition) click the 'Erase' button and then 'Erase' to confirm it. </p>
+<p>Wait while it erases your drive and perhaps your memories. It shouldn't take too long. If the process fails, try again. Otherwise the drive may be failing.</p>
+<p>Finally, exit out of the Disk Utility, select your drive and click Install. No need to customize as all the extra features have been taken out. </p>
+<p>Patches will be automatically installed if needed. Now all you have to do is wait for the installation process to finish. It should automatically reboot so you can go grab a snack or something while it installs. </p>
+<p>After the install, you may eject your USB drive or DVD from your Mac as it shouldn't be needed anymore.</p>
+<p>It should automatically boot into your Mac OS X installation but if it doesn't, hold the Option key on boot and select the Mac OS X partition. </p>
+<h3 id="pt-6"><strong>Pt. 6: If ..whatever happens</strong></h3>
+<ul>
+<li><h5>If it's not available, the installer may have failed to bless the volume. In this case, you may try to bless it yourself but it shouldn't be necessary.</h5>
+</li>
+<li><h5>If you boot and it gives you a nice prohibition sign, consider yourself screwed. You may try to reinstall but the issue is likely related to your hardware. You might wanna try booting in Verbose mode to check where it fails. </h5>
+</li>
+<li><h5>If you're booting through a third-party bootloader then it could likely be the issue. You should boot using completely vanilla methods like Apple intended.</h5>
+</li>
+<li><h5>If you kernel panic, your model is likely unsupported and this was a complete waste of time. If your machine IS supported, create an issue on GitHub or contact me.</h5>
+</li>
+<li><h5>If it keeps spinning forever, this could be because of the above issues or something completely different. Create an issue on GitHub or contact me.</h5>
+</li>
+<li><h5>If you reach the intro video, you'll find out which features work and don't work.</h5>
+</li>
+<li><h5>If you do not have any audio, you downloaded the wrong image. You should download the (ALT) image instead of the regular one. If you downloaded the ALT image and your machine needs the regular image, reinstall using the regular image.</h5>
+</li>
+</ul>
+<h3><strong>Pt. 7: Setting up your Mac.</strong></h3>
+<p>Set up your Mac as usual, and enjoy your Project 081 install. Any features designed for officially supported Intel Macs should be working, even on your Late 2007/Early 2008 Macs. If some features are broken, create an issue on GitHub please so that I can fix it.</p>
+<h4>You just finished the Project 081 install guide.</h4>
+<p>If you have any issues or questions, have a look around the Wiki.
+If you would like to contribute.. then please consider creating <a href="https://github.com/p081/Project081">pull requests or issues</a>.  Thank you for using the project.</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
