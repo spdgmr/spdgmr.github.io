@@ -1,0 +1,66 @@
+<head>
+<div class="header">
+<title>Why I don't support RiiConnect24. // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="RiiConnect24 is not what it seems. Most Nintendo Wii hackers sort of look up to the RiiConnect24 team and why not? They're the face of many modern Wii projects. They however are doing some pretty sketchy things such as violating copyleft free software licenses.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<link rel="stylesheet" href="css/riiconnect.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+<a href="donate.html">💰Donate</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>Why I don't support RiiConnect24.</h2>
+<h4>2022-05-20</h4>
+  <p>As you may be familiar with if you've been following me for a while, I usually cover free software and/or minimalism. Today however, it's going to be a little different. This time it's Nintendo Wii related. If you're only here for free software, you can just skip this post but for people who are a part of <a href="/ff.html">Forwarder Factory</a> or simply found my post elsewhere, this is probably worth the read.</p>
+  <p>For those who aren't into Wii but still wanna follow along for.. some reason, RiiConnect24 is a team of people behind Wii restoration, preservation and other popular projects. This blog post of mine explains why I'm against them and dislike their actions.</p>
+  <h4>Disclaimer</h4>
+  <p>I would also like to add, just in case this blog post of mine becomes remotely popular, please do NOT go ahead and hate on RiiConnect24. Despite the ethical flaws that will be shown, they really do not deserve it and you're not helping me by doing so. Please DO contact them and try to help them fix the mentioned issues however. Despite the claims I'm about to make and the facts, RiiConnect24 is behind great projects like the revived Nintendo Channels but this does NOT allow them to violate free software copyleft licenses among other things.</p>
+  <p>RiiConnect24 is not what it seems. Most Nintendo Wii hackers sort of look up to the RiiConnect24 team and why not? They're the face of many modern Wii projects such as the revived official Nintendo channels, WiiMod Lite, and the 'wii.guide' website which at first seems fairly innocent. In fact, I've had that exact same opinion on them for a long time. I simply saw them as 'modern' Wii hackers.</p>
+<h4>Violating the GNU General Public License v2</h4>
+  <p>This was never a big issue (well it is but no one actually noticed) but one RC24 project called 'WiiMod Lite' violates the GNU GPLv2 license. Many months ago, an Issue was created on the GitHub by user <strong>jornmann</strong> named 'Potential GPLv2 License Violation'.</p>
+  <p>As you can probably guess, WiiMod Lite violates the GNU GPLv2 license of WiiMod Lite which is <i>based on Yet Another Wad Manager Mod</i> which is <i>based on WAD Manager 1.7. Of course, waninkoko chose to license his software, WAD Manager <i>(1.7)</i> under GPLv2.</i>.</p>
+  <p>TLDR; If a project licensed under the GPLv2 license is forked, the fork cannot have its license changed. This means a fork can also not be proprietary. This is the part <a href="https://github.com/riiconnect24/wiimodlite">WiiMod Lite</a> violates. No matter what you think about non-free software, this is not okay and the original author of WiiMod Lite clearly picked this license because they are (as good people should be) against proprietary software.</p>
+  <h5>jornmann: GPLv2 requires the programs source to be disclosed and the license to be the same (GPLv2). WML is not licensed under GPLv2, and is proprietary. This is why it violates the license.</h5>
+  <h5>Artuto: Well we are not the original author nor have the source code or even the ability to relicense ¯_(ツ)_/¯.</h5>
+  <h5>jornmann: Then, as I've said before, contact the original author.</h5>
+  <h5>larsenv: We've tried to get ahold of the original author (who is Chinese) to no avail. I even asked someone from China to help contact them on the forum that they visit (tvgzone), but they couldn't register because they couldn't get a confirmation email for their account. I wanted the source code, but it's not my fault that they didn't share the source code.</h5>
+  <h5>jornmann: Well, that doesn't change the fact that you are still in violation of the GPLv2 license.</h5>
+  <h5>Artuto: There is nothing we can do, we cannot just magically generate the source code.</h5>
+  <p>I think it's pretty clear what they're doing. They're trying to repost this old but according to them 'great' WAD manager while POSSIBLY knowing that the developer isn't gonna care if they don't follow the license. And since the developer of the software is no longer around, RiiConnect gets ALL the credit because of course they uploaded the binary to their GitHub. Are you getting it yet?</p>
+  <p>Finally, Their excuse for doing this is essentially 'we couldn't find the source code and can therefore do whatever we want with this project'. Not having source code is not an excuse and if you don't have the source code, you shouldn't be recommending it. Don't you think it's ironic how RiiConnect is all about using modern software that's actively being maintained yet they recommend a WAD manager which hasn't and won't be updated in years. In fact, looking at the closed Issues for the RC24 WML repo, you can see most issues were closed with a 'We or anyone can't do X because the source code is missing' notice.</p>
+  <h4>wii.guide is very biased</h4>
+  <p>Yep, and it doesn't stop there because RiiConnect24 also owns and maintains <a href="https://wii.guide">wii.guide</a> which is the guide recommended by nearly everyone in the <i>modern</i> Nintendo Wii Homebrew/hacking scene.</p>
+  <p>I really dislike guides like this becoming popular because sure, it does mean there's <i>one guide that you can rely on that will be updated</i> but it also means that you can get a lot of people to use certain software for any reason. This is exactly what has happened with WiiMod Lite. The only reason I can think of as for why people use WiiMod Lite is that it's recommended by the guide and most new people read wii.guide anyway.</p>
+  <p>Since I hacked my Wii before wii.guide was even a thing, I didn't even know this WAD manager existed before I actually read wii.guide years after hacking Wii consoles. I guess saying this is also sort of biased because it's my own experience however my point is that most people wouldn't be using WiiMod Lite if wii.guide wasn't recommending it.</p>
+  <p>Now, before you think I'm just 'hating' to hate, I would like to mention that wii.guide existing is great. No longer do users have to worry about bricking their Wii because of a guide that hasn't been updated in 12 years telling you to install 20 cool awesome wads w/o Priiloader/BootMii@Boot2 but I wish wii.guide was less biased and offered alternatives to THEIR software so for example YAWWM instead of WiiMod Lite.</p>
+  <p>If all they did was recommend RiiConnect24, I wouldn't mind because there really is no alternative to the RC24 services as of 2022.</p>
+  <h4>Conclusion</h4>
+  <p>So, after all of that ranting, what do I actually think of RiiConnect24?</p>
+  <p>Well, I really like what RiiConnect is doing in terms of preservation and keeping Nintendo services up and running. This has given you a lot of respect among Wii users including myself. The problem is that this still doesn't allow you to completely ignore a license. It doesn't matter if the developer of X software is gone. If you don't have the source code, you're violating the license and should therefore not continue hosting X software.</p>
+  <p>As for being biased, I can sort of excuse that, even though it is a problem because they can get anyone to use anything.</p>
+  <p>However, wii.guide is still the only Wii guide worth using so really, I'd love to see it get improved.</p>
+  <p>Finally, do I hate RiiConnect24? No, I believe the people who are working on their projects simply want the best for us however like I said, they've been doing some <i>sketchy</i> stuff so that's what this post was made for.</p>
+  <p>I would like to thank you for reading this post,</p>
+  <p>If you wanna make a change, consider sharing this post with the RiiConnect24 people so that they can improve the problems I've discussed. If you have any more problems with RiiConnect24 and/or the people behind it that you'd like to share then please do so by <a href="mailto:speedie@duck.com">sending me an email</a>.</p>
+  <p>If you wanna support me and my work, consider <a href="/donate.html">donating anonymously here</a>.</p>
+  <p>Thank you for reading and have a super based day!</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
