@@ -33,33 +33,34 @@ It features many different patches which enhances the user experience and has ke
 <li>libXft-bgra (See Installing libXft-bgra)</li>
 <li>libXinerama (Can be disabled if you don&#39;t need multiple monitors)</li>
 <li>imlib2</li>
+<li>xwallpaper</li>
 <li>dmenu (Any build should work, can be replaced with rofi with some effort)</li>
 </ul>
 <h3>Installation</h3>
 <ul>
 <li>See dependencies</li>
 <li>Install dev-vcs/git using your favorite package manager</li>
-<li>git clone <this-url> (Or download a tar.gz, see Download)</li>
-<li>cd dwm</li>
-<li>sudo make install</li>
-<li>echo &quot;dwm&quot; &gt; ~/.xinitrc # If you&#39;re using a display manager, select it in your menu.</li>
+<li><code>git clone https://github.com/speedie-de/dwm</code> (Or download a tar.gz, see Download)</li>
+<li><code>cd dwm</code></li>
+<li><code>sudo make install</code></li>
+<li><code>echo &quot;dwm&quot; &gt; ~/.xinitrc</code> If you&#39;re using a display manager, select it in your menu. You may need to add an entry, I'm not entirely sure.</li>
 <li>See &quot;Installing libXft-bgra&quot;</li>
 </ul>
 <h3>Installation (Package manager)</h3>
 <p>If you&#39;re running (currently only) Gentoo then you can install my build of dwm using Portage.</p>
 <ul>
-<li>emerge layman</li>
-<li>layman -o <a href="https://raw.githubusercontent.com/spoverlay/splay/main/splay.xml">https://raw.githubusercontent.com/spoverlay/splay/main/splay.xml</a> -f -a splay</li>
-<li>layman -S</li>
-<li>emerge dwm-spde</li>
-<li>Optional: emerge st-spde dmenu-spde</li>
+<li><code>emerge layman</code></li>
+<li><code>layman -o <a href="https://raw.githubusercontent.com/spoverlay/splay/main/splay.xml">https://raw.githubusercontent.com/spoverlay/splay/main/splay.xml</a> -f -a splay</code></li>
+<li><code>layman -S</code></li>
+<li><code>emerge dwm-spde</code></li>
+<li>Optional: <code>emerge st-spde dmenu-spde</code></li>
 </ul>
 <h3>Installing libXft-bgra</h3>
 <p>This has to be done because this build of dwm supports Color emojis. Now the only problem is that libXft will crash dwm because it doesn&#39;t support this. Therefore libXft has to be patched. This is pretty painful so I built this into the Makefile.</p>
 <ul>
-<li>For Gentoo: make gentoo-libxftfix</li>
-<li>For Arch: make arch-libxftfix</li>
-<li>For other GNU/Linux distributions: make libxftfix</li>
+<li>For Gentoo: <code>make gentoo-libxftfix</code></li>
+<li>For Arch: <code>make arch-libxftfix</code></li>
+<li>For other GNU/Linux distributions: <code>make libxftfix</code></li>
 </ul>
 <h3>Features</h3>
 <p>This build of dwm has been patched pretty heavily with the following patches</p>
@@ -153,7 +154,7 @@ It features many different patches which enhances the user experience and has ke
 <li>dwm.status:               xshbar</li>
 <li>dwm.decorhints:           1</li>
 <li>dwm.vertpad:              0</li>
-<li>dwm.sidepad:              0  </li>
+<li>dwm.sidepad:              0</li>
 </ul>
 <p>I know that seems like a lot but if you&#39;re unsure, there&#39;s an example file.
 To use a .Xresources file, simply install xrdb and add xrdb /path/to/.Xresources to .xinitrc
@@ -167,91 +168,103 @@ Or if you&#39;re using a display manager, add it to the autostart function in co
 <p>NOTE: These are case-sensitive. This means &quot;s&quot; and &quot;S&quot; for example will NOT do the same thing.</p>
 <h4>Applications</h4>
 <ul>
-<li>Alt+Shift+Enter   | Opens a terminal</li>
-<li>Alt+Shift+Colon   | Opens a dmenu prompt</li>
-<li>Alt+Shift+d       | Opens &#39;cordless&#39; in a terminal</li>
-<li>Alt+Shift+s       | Opens &#39;maim&#39; to take a screenshot and copies it to the clipboard using &#39;xclip&#39;</li>
-<li>Alt+Shift+f       | Opens the defined file manager</li>
-<li>Alt+Shift+w       | Opens the defined web browser</li>
-<li>Alt+Shift+o       | Opens the dfmpeg dmenu script in dmenu which can record your screen (Only if manually installed)</li>
-<li>Alt+Shift+p       | Opens the genpkg dmenu script in dmenu which can look up ebuilds</li>
-<li>Alt+Shift+c       | Opens the copyout dmenu script in dmenu which can copy the output of a command.</li>
-<li>Alt+Shift+v       | Opens the dsearch dmenu script in dmenu which can search the web using many different search engines using dmenu and open the results in the defined web browser</li>
-<li>Alt+Shift+j       | Opens the cfgedit dmenu script in dmenu which can open configuration files in your editor</li>
-<li>Alt+Shift+e       | Opens the emoji picker dmenu script in dmenu which can copy an emoji to your clipboard</li>
-<li>Alt+Shift+comma   | Opens the dscratchpad dmenu script</li>
-<li>Alt+Shift+t       | Opens the defined editor in your terminal</li>
-<li>Alt+Shift+p       | pkills the defined web browser</li>
-<li>Alt+Shift+m       | pkills the defined music player</li>
-<li>Alt+Shift+a       | Opens the defined mixer in your terminal</li>
-<li>Alt+Shift+m       | Opens the defined music player</li>
-<li>Alt+Shift+x       | Opens the defined system process viewer in your terminal</li>
-<li>Control+Shift+m   | Opens the defined email client</li>
-<li>Control+Alt+u     | Opens the defined RSS reader</li>
+<li>Super+Shift+Enter         |  Opens a terminal</li>
+<li>Super+Shift+Colon         |  Opens a dmenu prompt</li>
+<li>Super+Shift+s             |  Opens &#39;maim&#39; to take a screenshot and copies it to the clipboard using &#39;xclip&#39;</li>
+<li>Super+Shift+f             |  Opens the defined file manager</li>
+<li>Super+Shift+w             |  Opens the defined web browser</li>
+<li>Super+Shift+o             |  Opens the dfmpeg dmenu script in dmenu which can record your screen (Only if manually installed)</li>
+<li>Super+Shift+p             |  Opens the genpkg dmenu script in dmenu which can look up ebuilds</li>
+<li>Super+Shift+c             |  Opens the copyout dmenu script in dmenu which can copy the output of a command.</li>
+<li>Super+Shift+v             |  Opens the dsearch dmenu script in dmenu which can search the web using many different search engines using dmenu and open the results in the defined web browser</li>
+<li>Super+Shift+j             |  Opens the cfgedit dmenu script in dmenu which can open configuration files in your editor</li>
+<li>Super+Shift+e             |  Opens the emoji picker dmenu script in dmenu which can copy an emoji to your clipboard</li>
+<li>Super+Shift+comma         |  Opens the dscratchpad dmenu script</li>
+<li>Super+Shift+t             |  Opens the defined editor in your terminal</li>
+<li>Super+Shift+p             |  pkills the defined web browser</li>
+<li>Super+Shift+m             |  pkills the defined music player</li>
+<li>Super+Shift+a             |  Opens the defined mixer in your terminal</li>
+<li>Super+Shift+m             |  Opens the defined music player</li>
+<li>Super+Shift+x             |  Opens the defined system process viewer in your terminal</li>
+<li>Super+Control+Shift+m     |  Opens the defined email client</li>
+<li>Super+Control+u           |  Opens the defined RSS reader</li>
 </ul>
 <h4>Navigation</h4>
 <ul>
-<li>Alt+f             | Full-screen the selected window</li>
-<li>Alt+b             | Show/hide the dwm bar</li>
-<li>Alt+j/k           | Move focus between windows</li>
-<li>Alt+a/d           | Increase/decrease size of each window</li>
-<li>Alt+Minus         | Show the scratchpad</li>
-<li>Alt+Equal         | Remove the scratchpad</li>
-<li>Alt+Enter         | Switch order of windows</li>
-<li>Alt+Shift+q       | Close the current window</li>
-<li>Alt+Space         | Set layout</li>
-<li>Alt+Shift+Equal   | Toggle scratchpads</li>
-<li>Alt+Shift+Minus   | Hide the scratchpad</li>
-<li>Alt+Shift+Space   | Unfloat floating windows</li>
-<li>Alt+Shift+Arrow   | Resizes a window in floating mode</li>
-<li>Alt+Shift+Tab     | Switch windows quickly and easily</li>
-<li>Alt+Shift+1       | Move to tag 1</li>
-<li>Alt+Shift+2       | Move to tag 2</li>
-<li>Alt+Shift+3       | Move to tag 3</li>
-<li>Alt+Shift+4       | Move to tag 4</li>
-<li>Alt+Shift+5       | Move to tag 5</li>
-<li>Alt+Shift+6       | Move to tag 6</li>
-<li>Alt+Shift+7       | Move to tag 7</li>
-<li>Alt+Shift+8       | Move to tag 8</li>
-<li>Alt+Shift+9       | Move to tag 9</li>
-<li>Alt+Shift+Escape  | Ask the user if they want to shutdown or reboot or nothing</li>
-<li>Alt+Shift+i       | Open a dmenu prompt and open the file the user picks in Zathura</li>
-<li>Alt+Shift+k       | Open a dmenu prompt and open the file the user picks in Vim</li>
-<li>Control+Alt+e     | Switch to layout 3 (Grid)</li>
-<li>Control+Alt+r     | Switch to layout 1 (Monocle)</li>
-<li>Control+Alt+t     | Switch to layout 0 (Master &amp; stack)</li>
-<li>Control+Alt+y     | Switch to layout 4 (Deck)</li>
-<li>NOTE: The rest of the layouts can be used using Ctrl+Shift+A/D or Ctrl+Alt+Escape</li>
-<li>Control+Alt+0     | Set all windows to use the same tag</li>
-<li>Control+Alt+Arrow | Moves a window to any corner of your screen</li>
-<li>Control+Alt+Comma | Run via if present.</li>
-<li>Control+Alt+Tab   | Open a dmenu prompt asking the user what layout to switch to</li>
-<li>Control+Shift+a/d | Move between available layouts</li>
-<li>Control+Shift+Tab | Read .Xresources again without reloading dwm</li>
-<li>Control+Shift+s   | Make the current selected window sticky</li>
-<li>Control+Alt+Shift+Escape | Open dwmutils (Main menu)</li>
-<li>Control+Alt+Shift+Arrow  | Resize the window to the screen size.</li>
+<li>Super+f                   |  Full-screen the selected window</li>
+<li>Super+b                   |  Show/hide the dwm bar</li>
+<li>Super+j/k                 |  Move focus between windows</li>
+<li>Super+a/d                 |  Increase/decrease size of each window</li>
+<li>Super+Minus               |  Show the scratchpad</li>
+<li>Super+Equal               |  Remove the scratchpad</li>
+<li>Super+Enter               |  Switch order of windows</li>
+<li>Super+Shift+q             |  Close the current window</li>
+<li>Super+Space               |  Set layout</li>
+<li>Super+Shift+Equal         |  Toggle scratchpads</li>
+<li>Super+Shift+Minus         |  Hide the scratchpad</li>
+<li>Super+Shift+Space         |  Unfloat floating windows</li>
+<li>Super+Shift+Arrow         |  Resizes a window in floating mode</li>
+<li>Super+Shift+1             |  Move to tag 1</li>
+<li>Super+Shift+2             |  Move to tag 2</li>
+<li>Super+Shift+3             |  Move to tag 3</li>
+<li>Super+Shift+4             |  Move to tag 4</li>
+<li>Super+Shift+5             |  Move to tag 5</li>
+<li>Super+Shift+6             |  Move to tag 6</li>
+<li>Super+Shift+7             |  Move to tag 7</li>
+<li>Super+Shift+8             |  Move to tag 8</li>
+<li>Super+Shift+9             |  Move to tag 9</li>
+<li>Super+Shift+Escape        |  Ask the user if they want to shutdown or reboot or nothing</li>
+<li>Super+Shift+i             |  Open a dmenu prompt and open the file the user picks in Zathura</li>
+<li>Super+Shift+k             |  Open a dmenu prompt and open the file the user picks in Vim</li>
+<li>Super+Control+e           |  Switch to layout 3 (Grid)</li>
+<li>Super+Control+r           |  Switch to layout 1 (Monocle)</li>
+<li>Super+Control+t           |  Switch to layout 0 (Master &amp; stack)</li>
+<li>Super+Control+y           |  Switch to layout 4 (Deck)</li>
+<li>Super+Control+0           |  Set all windows to use the same tag</li>
+<li>Super+Control+Arrow       |  Moves a window to any corner of your screen</li>
+<li>Super+Control+Comma       |  Run via if present.</li>
+<li>Super+Control+Tab         |  Open a dmenu prompt asking the user what layout to switch to</li>
+<li>Super+Control+h           |  Open a list of all keybinds in your terminal using less</li>
+<li>Super+Control+Shift+a/d   |  Move between available layouts</li>
+<li>Super+Control+Shift+Tab   |  Read .Xresources again without reloading dwm</li>
+<li>Super+Control+Shift+s     |  Make the current selected window sticky</li>
+<li>Super+Control+Shift+Esc   |  Open dwmutils (Main menu)</li>
+<li>Super+Control+Shift+Arrow |  Resize the window to the screen size.</li>
+<li>Super+Control+Shift+s     |  Set a wallpaper</li>
+<li>Alt+Tab                   |  Switch windows quickly and easily</li>
 </ul>
-<h4>Extras (These will only work if your keyboard has special multimedia buttons)</h4>
+<h4>Extras</h4>
+<p>(These will only work if your keyboard has special multimedia buttons)</p>
 <ul>
-<li>Mute button       | Mutes your audio</li>
-<li>Up Volume button  | Increases your volume</li>
-<li>Down Volume button| Decreases your volume</li>
-<li>Stop button       | Stops your defined music player</li>
-<li>Browser button    | Opens your defined web browser</li>
-<li>Power button      | Ask if you wanna shut down, restart or lock your computer.</li>
-<li>Email button      | Open your defined email client</li>
-<li>System button     | Open your defined status viewer in a terminal</li>
+<li>Mute button               | Mutes your audio</li>
+<li><ul>
+<li>Volume button           | Increases your volume</li>
 </ul>
+</li>
+<li><ul>
+<li>Volume button           | Decreases your volume</li>
+</ul>
+</li>
+<li>Stop button               | Stops your defined music player</li>
+<li>Browser button            | Opens your defined web browser</li>
+<li>Power button              | Ask if you wanna shut down, restart or lock your computer.</li>
+<li>Email button              | Open your defined email client</li>
+<li>System button             | Open your defined status viewer in a terminal</li>
+</ul>
+<h3>Getting started</h3>
+<p>You can easily get started with this build. First, add 'dwm' to your .xinitrc. Once you get into dwm, you'll want to set a wallpaper. If picom and xclip were installed as per the readme, they should automatically run.</p>
+<p>To set a wallpaper, if xwallpaper and dmenu are installed simply press Super+Control+Shift+s. This will bring up a dmenu prompt. It will ask you where all your folders are located, generate a config file in ~/.config/swal and then list all your wallpapers. Then simply select one, choose how you wanna set it, choose if you wanna use pywal and the wallpaper is set. It will be set each time dwm is started.</p>
+<p>If you're new and this seems like a lot to take in, there's only one keybind you absolutely need to master: Super+Ctrl+h. This will open up a list of every single keybind.</p>
+<p>If you're still lost, consider reading the <code>readme</code> file that this build comes with. It has everything you need to know.</p>
 <h3>Status bars</h3>
 <p>As for status bars, this build of dwm has been patched with extrabar and therefore supports dwmblocks. Here are a few status bars I use or have used in the past</p>
 <ul>
 <li><a href="xshbar.html">xshbar</a> (most based option)</li>
 <li><a href="https://github.com/speedie-de/xshbar">xshbar</a> (my build)</li>
+<li><a href="https://github.com/jornmann/candybar">candybar</a></li>
 <li><a href="https://github.com/speedie-de/slstatus">slstatus</a> (my build)</li>
 <li><a href="https://tools.suckless.org/slstatus">slstatus</a></li>
 <li><a href="https://github.com/joestandring/dwm-bar">dwmbar</a></li>
-<li><a href="https://github.com/jornmann/candybar">candybar</a></li>
 </ul>
 <h3>Fsignal</h3>
 <p>This build of dwm has been patched with fsignal meaning you can control dwm using shell commands. There&#39;s a shell script included that I wrote (dwmutils) which allows you to control many features of dwm through dmenu.</p>
@@ -283,8 +296,8 @@ Or if you&#39;re using a display manager, add it to the autostart function in co
 <p>You can easily expand this build of dwm by simply adding keybinds or patching it. That&#39;s the nice thing about suckless software.</p>
 <p>As for adding keybinds, just copy the existing binds and change a few things.</p>
 <h3>Download</h3>
-<p>You can download a tarball of my build</p>
-<a href="https://raw.githubusercontent.com/speedie-de/dwm/tarball/dwm-spde-6.3.tar.gz">dwm-spde-6.3.tar.gz</a>
+<p>You can download a tarball of my build. You can find older tarballs on GitHub in the 'tarball' branch.</p>
+<p><a href="https://raw.githubusercontent.com/speedie-de/dwm/tarball/dwm-spde-6.3.tar.gz">dwm-spde-6.3.tar.gz</a></p>
 <p>Or clone <a href="https://github.com/speedie-de/dwm.git">this</a> url.</p>
 </ul>
 </body>
