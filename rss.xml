@@ -263,7 +263,28 @@
    <p>At first it may seem like that but as soon as someone forks your software and changes the license to a non-free license you have MORE proprietary spyware so in the end you're causing more problems than you're solving. The GPL essentially tries to end proprietary software by providing a license which guarantees freedom like I stated in my <a href="https://speedie.gq/post13">previous post.</a> which is something I support. So that begs the question. Should you switch to the GNU GPLv3 license?</p>
    <p>Now, I would like to add that if you're heavily against the GNU project or the Free Software Foundation due to Richard Stallman, then you probably do not want to use the GPL. And most of the time the people who choose to NOT use the GPL for this reason cannot actually find a justifiable reason for their choice. I don't know about you and it's not my decision but either way the GPL is just a <i>software license</i> and therefore it really doesn't matter who wrote it. Just know that by using a license that doesn't prevent/stop non-free software, you're making the world a worse place.</p>
    <p>If your goal in addition to providing users with freedom and a great piece of software then the GPL is probably for you. The GPLv3 license guarantees freedom for anyone who uses the software. Therefore <i>in my opinion</i> by using the GPLv3 license you are making the world a better place by stopping potential proprietary software.</p>
-   <p>That's all for this blog post I guess, bye 👋</p>]]>
+   <p>That's all for this blog post I guess, bye.</p>]]>
+   </description>
+</item>
+<item>
+   <title>Are GNU/Linux users elitist or are normies too stupid to learn?</title>
+   <link>https://speedie.gq/post15.html</link>
+   <guid>https://speedie.gq/post15.html</guid>
+   <pubDate>Mon, 6 June 2022 00:00:00 GMT</pubDate>
+   <description>
+   <![CDATA[<p>Another day another blog post!</p>
+   <p>Windows/macOS users often call me an elitist GNU/Linux user but is that really deserved? Well, I personally don't think or care too much about people's opinions on me. After all, I have better things to do and since it's so common to call GNU/Linux users 'elitist', it doesn't really mean anything to me.</p>
+   <p>However, since this is so common I wanted to find this out for myself. So let's think for a moment here? Why do I write blog posts just like the one you're reading?</p>
+   <p>Well, for me it's because it allows me to say exactly what I think whenever I want. It's a nice way to (sometimes) express your anger at something. However I don't really view myself as an elitist. After all, I write blog posts like this one and write guides like <a href="https://speedie.gq/guide02.html">this one</a>. I went out of my way to help <i>new</i> GNU/Linux users in this case install Arch.</p>
+   <p>If I was an elitist I'd tell you to 'RTFM' like every Arch user ever. Instead I went out of my way to help you get started with Arch.</p>
+   <p>What I'm not about to do however is read the 'FM' for you. If you aren't capable of reading plain English then I will call you exactly what I view you as, <i>an idiot</i> or <i>a normie</i>.</p>
+   <p>In addition to this, it ALWAYS seems like the people calling <i>me</i> an elitist are part of this group. People who will complain about something being difficult without having the patience to read and perform. They will call anyone who uses software that they view difficult to use (for example Gentoo, Arch, or suckless software) an elitist. They can't seem to find one reason why anyone would actually want to use said software except to look cool on the internet.</p>
+   <p>Now I'm not gonna deny the fact that there do exist <i>some</i> elitist GNU/Linux users but they're the exception rather than the rule. Most people who use this (in the normie's eye difficult) software do it because it's more efficient once you know how it works. A good example of this would be Vim.</p>
+   <p>The 'real' elitists (in my opinion) are the normies since they consider anyone who uses X software an elitist even if only a few (but loud) people have an elitist attitude about the software they use.</p>
+   <p>The normies are proud to be normies. Just like we are proud to use this 'hard to use' software.</p>
+   <p>The difference is, we try to teach the normies this 'hard to use' software but instead of actually learning anything, they simply call us elitists. Therefore, I personally consider the normies the actual elitists.</p>
+   <p>To be clear, if you don't understand how to use X software then that's perfectly fine. What I do have a problem with is proud stupidity. Normies are always proud to be normies instead of learning. They take pride in being stupid.</p>
+   <p>That's all for this blog post. Happy <i>pride</i> month too, I guess?</p>]]>
    </description>
 </item>
 </channel>
