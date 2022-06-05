@@ -247,5 +247,24 @@
 <p>Open source does not guarantee the user's freedom. This is why tech companies support 'Open source' but not free software. Free software is evil to them because they want control, something free software doesn't and cannot allow.</p>]]>
    </description>
 </item>
+<item>
+   <title>Why I switched license from MIT to GPLv3</title>
+   <link>https://speedie.gq/post14.html</link>
+   <guid>https://speedie.gq/post14.html</guid>
+   <pubDate>Sun, 5 June 2022 00:00:00 GMT</pubDate>
+   <description>
+   <![CDATA[<p>Like I said last time, I wanted to make some more positive blog posts so here goes, I guess!</p>
+   <p>In this blog post I wanna sort of explain why I switched to the GNU GPLv3 license after having used the MIT license for such a long time. I also hope this will be my last FSF/GNU related post for a bit but usually I just write about whatever is on my mind.<p>
+   <p>- So why did I switch license from MIT to the GPLv3?<p>
+   <p>It's fairly simple. Both are free software licenses but the MIT license and most other licenses are missing one specific point that I really like and it's the main reason I switched.</p>
+   <p>Most other licenses including the MIT allow anyone to fork the project and redistribute it just like the GPL but the problem is the license can be changed to whatever the fork author wants. This also includes a proprietary license which goes against what I want out of a license. I want to <i>prevent</i> non-free software, I don't want to <i>help</i> non-free software.</p>
+   <p>- How are you helping non-free software?</p>
+   <p>Essentially I'm writing their software for them, so then they can just fork it and make proprietary spyware out of it. This has happened to many different projects and you can thank these licenses that don't prevent a license change for proprietary firmware and other nasty stuff that (probably) runs on your GNU/Linux box. Some people may argue that the GPL is actually non-free because it <i>doesn't</i> let you fork under another license but I heavily disagree</p>
+   <p>At first it may seem like that but as soon as someone forks your software and changes the license to a non-free license you have MORE proprietary spyware so in the end you're causing more problems than you're solving. The GPL essentially tries to end proprietary software by providing a license which guarantees freedom like I stated in my <a href="https://speedie.gq/post13">previous post.</a> which is something I support. So that begs the question. Should you switch to the GNU GPLv3 license?</p>
+   <p>Now, I would like to add that if you're heavily against the GNU project or the Free Software Foundation due to Richard Stallman, then you probably do not want to use the GPL. And most of the time the people who choose to NOT use the GPL for this reason cannot actually find a justifiable reason for their choice. I don't know about you and it's not my decision but either way the GPL is just a <i>software license</i> and therefore it really doesn't matter who wrote it. Just know that by using a license that doesn't prevent/stop non-free software, you're making the world a worse place.</p>
+   <p>If your goal in addition to providing users with freedom and a great piece of software then the GPL is probably for you. The GPLv3 license guarantees freedom for anyone who uses the software. Therefore <i>in my opinion</i> by using the GPLv3 license you are making the world a better place by stopping potential proprietary software.</p>
+   <p>That's all for this blog post I guess, bye 👋</p>]]>
+   </description>
+</item>
 </channel>
 </rss>
