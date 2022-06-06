@@ -34,7 +34,8 @@ It features many different patches which enhances the user experience and has ke
 <li>libXinerama (Can be disabled if you don&#39;t need multiple monitors)</li>
 <li>imlib2</li>
 <li>xwallpaper</li>
-<li>dmenu (Any build should work, can be replaced with rofi with some effort)</li>
+<li>xsetroot</li>
+<li>dmenu (Any build should work if it allows colored fonts, can be replaced with rofi with some effort)</li>
 </ul>
 <h3>Installation</h3>
 <ul>
@@ -63,194 +64,16 @@ It features many different patches which enhances the user experience and has ke
 <li>For other GNU/Linux distributions: <code>make libxftfix</code></li>
 </ul>
 <h3>Features</h3>
-<p>This build of dwm has been patched pretty heavily with the following patches</p>
-<ul>
-<li>dwm-actualfullscreen</li>
-<li>dwm-alpha</li>
-<li>dwm-alttags</li>
-<li>dwm-centeredtitle</li>
-<li>dwm-centerfirstwindow</li>
-<li>dwm-cool-autostart</li>
-<li>dwm-cyclelayouts</li>
-<li>dwm-emptyview</li>
-<li>dwm-fullgaps</li>
-<li>dwm-gridmode</li>
-<li>dwm-hide_vacant_tags</li>
-<li>dwm-no-mouse-support</li>
-<li>dwm-pertag</li>
-<li>dwm-rainbowtags</li>
-<li>dwm-statuscmd</li>
-<li>dwm-steam</li>
-<li>dwm-upgrade-6.3</li>
-<li>dwm-warp</li>
-<li>dwm-winicon</li>
-<li>dwm-xresources</li>
-<li>dwm-pywal</li>
-<li>dwm-moveresize</li>
-<li>dwm-autoresize</li>
-<li>dwm-deck</li>
-<li>dwm-deck-tilegap</li>
-<li>dwm-ewmhtags</li>
-<li>dwm-focusonnetactive</li>
-<li>dwm-sticky</li>
-<li>dwm-dynamicscratchpads</li>
-<li>dwm-namedscratchpads</li>
-<li>dwm-decorhints</li>
-<li>dwm-swallow</li>
-<li>dwm-fibonacci</li>
-<li>dwm-centeredmaster</li>
-<li>dwm-barpadding</li>
-<li>dwm-threecolumn</li>
-<li>dwm-bottomstack</li>
-<li>dwm-horizgrid</li>
-<li>dwm-alwayscenter</li>
-<li>dwm-rulerefresher</li>
-<li>dwm-alpha-monocle</li>
-<li>dwm-tatami</li>
-<li>dwm-fsignal</li>
-</ul>
-<p>This build of dwm has full compatibility with .Xresources and allows defining these options</p>
-<ul>
-<li>dwm.nmaster:              1</li>
-<li>dwm.font:                 Terminus:size=8</li>
-<li>dwm.font2:                JoyPixels:size=8</li>
-<li>dwm.font3:                Siji:size=8</li>
-<li>dwm.col_background:       #222222</li>
-<li>dwm.col_backgroundmid:    #222222</li>
-<li>dwm.col_textnorm:         #bbbbbb</li>
-<li>dwm.col_textsel:          #eeeeee</li>
-<li>dwm.col_windowbordersel:  #eeeeee</li>
-<li>dwm.col_windowbordernorm: #000000</li>
-<li>dwm.col_tag1:             #333333</li>
-<li>dwm.col_tag1_text:        #eeeeee</li>
-<li>dwm.col_tag2:             #333333</li>
-<li>dwm.col_tag2_text:        #eeeeee</li>
-<li>dwm.col_tag3:             #333333</li>
-<li>dwm.col_tag3_text:        #eeeeee</li>
-<li>dwm.col_tag4:             #333333</li>
-<li>dwm.col_tag4_text:        #eeeeee</li>
-<li>dwm.col_tag5:             #333333</li>
-<li>dwm.col_tag5_text:        #eeeeee</li>
-<li>dwm.col_tag6:             #333333</li>
-<li>dwm.col_tag6_text:        #eeeeee</li>
-<li>dwm.col_tag7:             #333333</li>
-<li>dwm.col_tag7_text:        #eeeeee</li>
-<li>dwm.col_tag8:             #333333</li>
-<li>dwm.col_tag8_text:        #eeeeee</li>
-<li>dwm.col_tag9:             #333333</li>
-<li>dwm.col_tag9_text:        #eeeeee</li>
-<li>dwm.borderpx:             1</li>
-<li>dwm.snap:                 32</li>
-<li>dwm.showbar:              1</li>
-<li>dwm.topbar:               1</li>
-<li>dwm.resizehints:          0</li>
-<li>dwm.mfact:                0.50</li>
-<li>dwm.startontag:           1</li>
-<li>dwm.gappx:                10</li>
-<li>dwm.rmaster:              0</li>
-<li>dwm.shell:                /bin/sh</li>
-<li>dwm.sizeicon:             16</li>
-<li>dwm.spacingicon:          5</li>
-<li>dwm.status:               xshbar</li>
-<li>dwm.decorhints:           1</li>
-<li>dwm.vertpad:              0</li>
-<li>dwm.sidepad:              0</li>
-</ul>
-<p>I know that seems like a lot but if you&#39;re unsure, there&#39;s an example file.
-To use a .Xresources file, simply install xrdb and add xrdb /path/to/.Xresources to .xinitrc
-Or if you&#39;re using a display manager, add it to the autostart function in config.def.h.</p>
+<p>This build of dwm has been patched pretty heavily. See docs/patchlist if you want to know what patches are included.</p>
+<h3>.Xresources</h3>
+<p>This build has full compatibility with .Xresources. You can see a full list of options in docs/example.Xresources. To use a .Xresources file, simply put it in ~ or ~/.config and restart dwm. You do not need to add it to .xinitrc.</p>
 <h3>Important</h3>
 <ul>
 <li>This build does not keep object files or config.h. Those are automatically deleted after a successful compile. If a compile is not successful, they will not be deleted. If that&#39;s the case, do NOT edit config.h because if you do and it compiles successfully then your changes will be lost.</li>
 <li>This build REQUIRES libXft-bgra. If you don&#39;t know what that is, it&#39;s a patched build of libXft which fixes a bug which causes dmenu to crash when displaying certain characters. That can be installed through make <distro>-libxftfix</li>
 </ul>
 <h3>Keybinds</h3>
-<p>NOTE: These are case-sensitive. This means &quot;s&quot; and &quot;S&quot; for example will NOT do the same thing.</p>
-<h4>Applications</h4>
-<ul>
-<li>Super+Shift+Enter         |  Opens a terminal</li>
-<li>Super+Shift+Colon         |  Opens a dmenu prompt</li>
-<li>Super+Shift+s             |  Opens &#39;maim&#39; to take a screenshot and copies it to the clipboard using &#39;xclip&#39;</li>
-<li>Super+Shift+f             |  Opens the defined file manager</li>
-<li>Super+Shift+w             |  Opens the defined web browser</li>
-<li>Super+Shift+o             |  Opens the dfmpeg dmenu script in dmenu which can record your screen (Only if manually installed)</li>
-<li>Super+Shift+p             |  Opens the genpkg dmenu script in dmenu which can look up ebuilds</li>
-<li>Super+Shift+c             |  Opens the copyout dmenu script in dmenu which can copy the output of a command.</li>
-<li>Super+Shift+v             |  Opens the dsearch dmenu script in dmenu which can search the web using many different search engines using dmenu and open the results in the defined web browser</li>
-<li>Super+Shift+j             |  Opens the cfgedit dmenu script in dmenu which can open configuration files in your editor</li>
-<li>Super+Shift+e             |  Opens the emoji picker dmenu script in dmenu which can copy an emoji to your clipboard</li>
-<li>Super+Shift+comma         |  Opens the dscratchpad dmenu script</li>
-<li>Super+Shift+t             |  Opens the defined editor in your terminal</li>
-<li>Super+Shift+p             |  pkills the defined web browser</li>
-<li>Super+Shift+m             |  pkills the defined music player</li>
-<li>Super+Shift+a             |  Opens the defined mixer in your terminal</li>
-<li>Super+Shift+m             |  Opens the defined music player</li>
-<li>Super+Shift+x             |  Opens the defined system process viewer in your terminal</li>
-<li>Super+Control+Shift+m     |  Opens the defined email client</li>
-<li>Super+Control+u           |  Opens the defined RSS reader</li>
-</ul>
-<h4>Navigation</h4>
-<ul>
-<li>Super+f                   |  Full-screen the selected window</li>
-<li>Super+b                   |  Show/hide the dwm bar</li>
-<li>Super+j/k                 |  Move focus between windows</li>
-<li>Super+a/d                 |  Increase/decrease size of each window</li>
-<li>Super+Minus               |  Show the scratchpad</li>
-<li>Super+Equal               |  Remove the scratchpad</li>
-<li>Super+Enter               |  Switch order of windows</li>
-<li>Super+Shift+q             |  Close the current window</li>
-<li>Super+Space               |  Set layout</li>
-<li>Super+Shift+Equal         |  Toggle scratchpads</li>
-<li>Super+Shift+Minus         |  Hide the scratchpad</li>
-<li>Super+Shift+Space         |  Unfloat floating windows</li>
-<li>Super+Shift+Arrow         |  Resizes a window in floating mode</li>
-<li>Super+Shift+1             |  Move to tag 1</li>
-<li>Super+Shift+2             |  Move to tag 2</li>
-<li>Super+Shift+3             |  Move to tag 3</li>
-<li>Super+Shift+4             |  Move to tag 4</li>
-<li>Super+Shift+5             |  Move to tag 5</li>
-<li>Super+Shift+6             |  Move to tag 6</li>
-<li>Super+Shift+7             |  Move to tag 7</li>
-<li>Super+Shift+8             |  Move to tag 8</li>
-<li>Super+Shift+9             |  Move to tag 9</li>
-<li>Super+Shift+Escape        |  Ask the user if they want to shutdown or reboot or nothing</li>
-<li>Super+Shift+i             |  Open a dmenu prompt and open the file the user picks in Zathura</li>
-<li>Super+Shift+k             |  Open a dmenu prompt and open the file the user picks in Vim</li>
-<li>Super+Control+e           |  Switch to layout 3 (Grid)</li>
-<li>Super+Control+r           |  Switch to layout 1 (Monocle)</li>
-<li>Super+Control+t           |  Switch to layout 0 (Master &amp; stack)</li>
-<li>Super+Control+y           |  Switch to layout 4 (Deck)</li>
-<li>Super+Control+0           |  Set all windows to use the same tag</li>
-<li>Super+Control+Arrow       |  Moves a window to any corner of your screen</li>
-<li>Super+Control+Comma       |  Run via if present.</li>
-<li>Super+Control+Tab         |  Open a dmenu prompt asking the user what layout to switch to</li>
-<li>Super+Control+h           |  Open a list of all keybinds in your terminal using less</li>
-<li>Super+Control+Shift+a/d   |  Move between available layouts</li>
-<li>Super+Control+Shift+Tab   |  Read .Xresources again without reloading dwm</li>
-<li>Super+Control+Shift+s     |  Make the current selected window sticky</li>
-<li>Super+Control+Shift+Esc   |  Open dwmutils (Main menu)</li>
-<li>Super+Control+Shift+Arrow |  Resize the window to the screen size.</li>
-<li>Super+Control+Shift+s     |  Set a wallpaper</li>
-<li>Alt+Tab                   |  Switch windows quickly and easily</li>
-</ul>
-<h4>Extras</h4>
-<p>(These will only work if your keyboard has special multimedia buttons)</p>
-<ul>
-<li>Mute button               | Mutes your audio</li>
-<li><ul>
-<li>Volume button           | Increases your volume</li>
-</ul>
-</li>
-<li><ul>
-<li>Volume button           | Decreases your volume</li>
-</ul>
-</li>
-<li>Stop button               | Stops your defined music player</li>
-<li>Browser button            | Opens your defined web browser</li>
-<li>Power button              | Ask if you wanna shut down, restart or lock your computer.</li>
-<li>Email button              | Open your defined email client</li>
-<li>System button             | Open your defined status viewer in a terminal</li>
-</ul>
+<p>Press Super+Control+h to see a list of all keybinds.</p>
 <h3>Getting started</h3>
 <p>You can easily get started with this build. First, add 'dwm' to your .xinitrc. Once you get into dwm, you'll want to set a wallpaper. If picom and xclip were installed as per the readme, they should automatically run.</p>
 <p>To set a wallpaper, if xwallpaper and dmenu are installed simply press Super+Control+Shift+s. This will bring up a dmenu prompt. It will ask you where all your folders are located, generate a config file in ~/.config/swal and then list all your wallpapers. Then simply select one, choose how you wanna set it, choose if you wanna use pywal and the wallpaper is set. It will be set each time dwm is started.</p>
@@ -267,31 +90,7 @@ Or if you&#39;re using a display manager, add it to the autostart function in co
 <li><a href="https://github.com/joestandring/dwm-bar">dwmbar</a></li>
 </ul>
 <h3>Fsignal</h3>
-<p>This build of dwm has been patched with fsignal meaning you can control dwm using shell commands. There&#39;s a shell script included that I wrote (dwmutils) which allows you to control many features of dwm through dmenu.</p>
-<ul>
-<li>xsetroot -name &quot;fsignal:1&quot;  | Tiling</li>
-<li>xsetroot -name &quot;fsignal:2&quot;  | Floating</li>
-<li>xsetroot -name &quot;fsignal:3&quot;  | Monocle</li>
-<li>xsetroot -name &quot;fsignal:4&quot;  | Grid</li>
-<li>xsetroot -name &quot;fsignal:5&quot;  | Deck</li>
-<li>xsetroot -name &quot;fsignal:6&quot;  | Centered Master</li>
-<li>xsetroot -name &quot;fsignal:7&quot;  | Centered Floating Master</li>
-<li>xsetroot -name &quot;fsignal:8&quot;  | Fibonacci Spiral</li>
-<li>xsetroot -name &quot;fsignal:9&quot;  | Fibonacci Dwindle</li>
-<li>xsetroot -name &quot;fsignal:10&quot; | Three Column</li>
-<li>xsetroot -name &quot;fsignal:11&quot; | Bottom Stack Vertical</li>
-<li>xsetroot -name &quot;fsignal:12&quot; | Bottom Stack Horizontal</li>
-<li>xsetroot -name &quot;fsignal:13&quot; | Horizontal Grid</li>
-<li>xsetroot -name &quot;fsignal:14&quot; | Tatami</li>
-<li>xsetroot -name &quot;fsignal:15&quot; | To be added</li>
-<li>xsetroot -name &quot;fsignal:16&quot; | Cycle layout (Previous)</li>
-<li>xsetroot -name &quot;fsignal:17&quot; | Cycle layout (Next)</li>
-<li>xsetroot -name &quot;fsignal:18&quot; | Reload colors from .Xresources (livereloadxrdb)</li>
-<li>xsetroot -name &quot;fsignal:19&quot; | Set mfact (-0.05)</li>
-<li>xsetroot -name &quot;fsignal:20&quot; | Set mfact (+0.05)</li>
-<li>xsetroot -name &quot;fsignal:21&quot; | Toggle Scratchpad</li>
-<li>xsetroot -name &quot;fsignal:22&quot; | Toggle Sticky</li>
-</ul>
+<p>This build of dwm has been patched with fsignal meaning you can control dwm using shell commands. There&#39;s a shell script included that I wrote (dwmutils) which allows you to control many features of dwm through dmenu. A full list can be found in docs/example.fsignal</p>
 <h3>Expanding</h3>
 <p>You can easily expand this build of dwm by simply adding keybinds or patching it. That&#39;s the nice thing about suckless software.</p>
 <p>As for adding keybinds, just copy the existing binds and change a few things.</p>
