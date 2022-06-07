@@ -292,6 +292,7 @@
    <link>https://speedie.gq/post16.html</link>
    <guid>https://speedie.gq/post16.html</guid>
    <pubDate>Tue, 7 June 2022 00:00:00 GMT</pubDate>
+   <description>
    <![CDATA[<p>It's been a while since I've updated rchat. Earlier today I decided to improve rchat since I noticed it had many flaws that I thought I could improve on.</p>
   <p>rchat 1.0 brings many improvements. :help, :changelog and :history now have colors, Borders now scale based on the size of your terminal window.</p>
   <p>In addition to this, you can now use ~/.config/rchat/rchatrc to set options. This might be useful if you wanna set settings without using commands. You can also set the border character using the ':set sep' command. :help, :changelog and :donate commands can be used without joining now.</p>
