@@ -45,7 +45,11 @@
 <h1>Installation</h1>
   <p>To install rchat, If you run Arch Linux or any distributions based on it, you can simply get it from the AUR (although it may be slightly outdated). Package is maintained by nezbednik and as of 0.4, is fully up-to-date. If you use 'yay', run 'yay -S rchat'. Then you can just begin using it.</p>
   <p>If you run Gentoo Linux, you can add <a href="https://github.com/spoverlay/splay">my overlay</a> using layman and then just emerge it. The ebuild is maintained by me so it should be up-to-date.</p>
-  <p>Otherwise, just curl <a href="https://raw.githubusercontent.com/speediegamer/rchat/main/rchat">this link</a> to /usr/bin and chmod +x it.</p>
+  <p>I recommend installing it by cloning the repository.</p>
+  <p><code>cd ~</code></p>
+  <p><code>git clone https://github.com/speediegq/rchat</code></p>
+  <p><code>cd rchat</code></p>
+  <p><code>make install</code></p>
 <h1>Usage</h1>
   <p>See Installation, then simply run it in a terminal. To join the default instance, simply type ':j'.</p>
   <p>To set a different instance, type ':set instance' and then enter your instance. If the instance is invalid or you wanna set it back, type ':set instance default'.</p>
@@ -66,11 +70,13 @@
   <li>rchat.linecount</li>
 </ul>
   <p>Simply apply as usual.</p>
-<h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-0.5.diff">[Download]</a></h3>
+<h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-0.5.diff">rchat-xresources-0.5.diff</a></h3>
+<h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-1.0.diff">rchat-xresources-1.0.diff</a></h3>
 <h2>Notifications</h2>
   <img src="img/notif.png" alt="image">
   <p>This patch enables support for notifications in rchat using 'notify-send'. Make sure to install 'libnotify-send' before using.</p>
-  <h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-0.5.diff">[Download]</a></h3>
+  <h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-0.5.diff">rchat-notification-0.5.diff</a></h3>
+  <h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-1.0.diff">rchat-notification-1.0.diff</a></h3>
 </body>
 <footer>
 <h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>

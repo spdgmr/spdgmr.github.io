@@ -287,5 +287,18 @@
    <p>That's all for this blog post. Happy <i>pride</i> month too, I guess?</p>]]>
    </description>
 </item>
+<item>
+   <title>Return of the rchat (rchat 1.0 is out)</title>
+   <link>https://speedie.gq/post16.html</link>
+   <guid>https://speedie.gq/post16.html</guid>
+   <pubDate>Tue, 7 June 2022 00:00:00 GMT</pubDate>
+   <![CDATA[<p>It's been a while since I've updated rchat. Earlier today I decided to improve rchat since I noticed it had many flaws that I thought I could improve on.</p>
+  <p>rchat 1.0 brings many improvements. :help, :changelog and :history now have colors, Borders now scale based on the size of your terminal window.</p>
+  <p>In addition to this, you can now use ~/.config/rchat/rchatrc to set options. This might be useful if you wanna set settings without using commands. You can also set the border character using the ':set sep' command. :help, :changelog and :donate commands can be used without joining now.</p>
+  <p>You can reset all settings using the ':reset' command. You can also open my donation page by using the ':donate' command. Fairly small but very useful release. If you want to install it, you can clone the <a href="https://github.com/speediegq/rchat">rchat repository</a> and run <code>make install</code> as root.</p>
+  <p>Gentoo and Arch repositories should be updated soon.</p>
+  <p>Have a good day!</p>]]>
+  </description>
+</item>
 </channel>
 </rss>
