@@ -3,10 +3,14 @@ body {
   background-color: #111111;
 }
 
-div {
+.header {
   margin: auto;
   width: 300px;
   background: auto;
+}
+
+.column {
+  display: inline;
 }
 
 hr {
@@ -103,7 +107,7 @@ li {
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 8px;
   font-size: 15px;
 }
 
@@ -130,7 +134,7 @@ pre {
 }
 
 img {
-  width: 90%;
+  width: 50%;
   padding-left: 10px;
 }
 }
@@ -140,7 +144,7 @@ body {
   background-color: #ffffed;
 }
 
-div {
+.header {
   margin: auto;
   width: 300px;
   background: auto;
@@ -240,7 +244,7 @@ li {
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 8px;
   font-size: 15px;
 }
 
@@ -267,7 +271,7 @@ pre {
 }
 
 img {
-  width: 90%;
+  width: 50%;
   padding-left: 10px;
 }
 }
