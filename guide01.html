@@ -26,25 +26,24 @@
 <h4>2022-03-23</h4>
 <p>This guide will go over how to upgrade your kernel on Gentoo Linux to 5.17.0. If we check the <a href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources">sys-kernel/gentoo-sources</a> package we can see that 5.17.0 is now available as of 2022-03-23. However it is not stable so we will need to unmask it.</p>
 <p>First, let’s use the su command to change our user to root since many commands will require root permissions. You could use sudo/doas for each command but that’s painful.</p>
-<p>Now, one pretty unstable way to do this is to simply have ACCEPT_KEYWORDS="~amd64" in /etc/portage/make.conf but this is not stable and will ALWAYS allow “untested” packages to be installed on your system. I and others prefer this but it’s not something you should use if you care about a stable system. Now, one pretty unstable way to do this is to simply have ACCEPT_KEYWORDS="~amd64" in /etc/portage/make.conf but this is not stable and will ALWAYS allow “testing” packages to be installed on your system. I and others prefer this but it’s not something you should use if you care about a stable system.</p>
-<p>So instead, let’s individually unmask this package. Create /etc/portage/package.unmask and add sys-kernel/gentoo-sources to the file</p>
+<p>Now, one pretty unstable way to do this is to simply have <code>ACCEPT_KEYWORDS="~amd64"</code> in /etc/portage/make.conf but this is not stable and will ALWAYS allow “untested” packages to be installed on your system. I and others prefer this but it’s not something you should use if you care about a stable system.</p>
+<p>So instead, let’s individually unmask this package. Create /etc/portage/package.unmask and add <code>sys-kernel/gentoo-sources</code> to the file.</p>
 <img src="img/guide-01-img-1.png" alt="image">
-<p>Now, your sources are likely outdated so we will need to update them. To do this, run emerge --sync; emerge-webrsync</p>
-<p>Once we’ve synced our repositories, let’s try running emerge --ask gentoo-sources. If the version is 5.17.0 or later then you’ve correctly unmasked and synced your repositories.</p>
+<p>Now, your sources are likely outdated so we will need to update them. To do this, run <code>emerge --sync; emerge-webrsync</code></p>
+<p>Once we’ve synced our repositories, let’s try running <code>emerge --ask gentoo-sources</code>. If the version is 5.17.0 or later then you’ve correctly unmasked and synced your repositories.</p>
 <img src="img/guide-01-img-2.png" alt="image">
 <p>Now emerge this and wait.</p>
 <img src="img/guide-01-img-3.png" alt="image">
-<p>Once the emerge is complete it’s time to back up our kernel configuration. cd /usr/src/linux and cp <kernel> /home/<user> where <kernel> is the name of your kernel config and <user> is your user account. You don’t have to back it up to this place but you need a backup of your kernel configuration unless you wanna configure a new one. Now cd /home/<user>.</p> 
-<p>Now that we have a backup of our previous configuration, it’s time to change our symlink. Run eselect kernel list</p>
+<p>Once the emerge is complete it’s time to back up our kernel configuration. cd /usr/src/linux and <code>cp kernel /home/user</code> where <code>kernel</code> is the name of your kernel config and <code>user</code> is your user account. You don’t have to back it up to this place but you need a backup of your kernel configuration unless you wanna configure a new one. Now <code>cd /home/user</code>.</p> 
 <img src="img/guide-01-img-4.png" alt="image">
-<p>Now that we have a backup of our previous configuration, it’s time to change our symlink. Run eselect kernel list</p>
-<p>Then run eselect kernel set <number> where <number> is the number of the kernel you will be using (should be 5.17.0)</p>
+<p>Now that we have a backup of our previous configuration, it’s time to change our symlink. Run <code>eselect kernel list</code></p>
+<p>Then run <code>eselect kernel set number</code> where <code>number</code> is the number of the kernel you will be using (should be 5.17.0)</p>
 <img src="img/guide-01-img-5.png" alt="image">
-<p>cd /usr/src/linux; cp /home/<user>/<kernel> /usr/src/linux/.config; make olddefconfig.</p>
+<p><code>cd /usr/src/linux; cp /home/user/kernel /usr/src/linux/.config; make olddefconfig</code>.</p>
 <p>This string of commands will copy the kernel config to the 5.17.0 kernel directory. The make olddefconfig will use your old kernel and set the new settings newer kernels offer to the defaults. This should be fine unless you NEED to change them.</p>
-<p>Once this is complete, make sure your /boot is mounted and then run make -j$(nproc); make install to compile the kernel and copy it over to your /boot partition.</p>
-<p>Finally, let’s make sure our bootloader can find it. For Grub, you need to grub-mkconfig -o /boot/grub/grub.cfg but if you’re not using Grub then you will have to use <a href="https://searx.org">searx</a> to find out what to do.
-<p>IMPORTANT: If you are using an initramfs then you need to create a new one. To do this you can use either genkernel or dracut. To use genkernel, run genkernel --install --kernel-config=/usr/src/linux/.config initramfs. Then just repeat the previous step.</p>
+<p>Once this is complete, make sure your /boot is mounted and then run <code>make -j$(nproc); make install</code> to compile the kernel and copy it over to your /boot partition.</p>
+<p>Finally, let’s make sure our bootloader can find it. For Grub, you need to <code>grub-mkconfig -o /boot/grub/grub.cfg</code> but if you’re not using Grub then you will have to use <a href="https://searx.space">searx</a> to find out what to do.
+<p>IMPORTANT: If you are using an initramfs then you need to create a new one. To do this you can use either genkernel or dracut. To use genkernel, run <code>genkernel --install --kernel-config=/usr/src/linux/.config initramfs</code>. Then just repeat the previous step.</p>
 <p>Now you’re done. Now reboot and make sure your kernel boots. If you cannot boot, you will have to do some troubleshooting..</p>
 <p>Have a good day and good luck with Gentoo.</p>
 </body>
