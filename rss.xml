@@ -299,5 +299,18 @@
   <p>Have a good day!</p>]]>
   </description>
 </item>
+<item>
+   <title>Website update</title>
+   <link>https://speedie.gq/post17.html</link>
+   <guid>https://speedie.gq/post17.html</guid>
+   <pubDate>Fri, 8 June 2022 00:00:00 GMT</pubDate>
+   <description>
+   <![CDATA[<p>Since yesterday I've been working on a little website overhaul (mostly fixing errors and improving index.html) so this is just a quick blog post telling you about it.</p>
+   <p>Normally I wouldn't make a blog post about small changes like this because... I mean it's a website, it's supposed to be updated and changed frequently.</p>
+   <p>I've made some changes to the layout however and removed a few buttons. For example, my forks and dotfiles can now be found <a href="dotfiles.html">here</a> instead. This was done to keep the front page clean and to the point. I also removed some project links but they're still up, just in the <a href="projects.html">Projects</a> page instead.</p>
+   <p>I added some fancy 90s style buttons as well to the footer of the front page because I thought they were cool. Let me know what you think about them and feel free to suggest more (License must be free to use). I also renamed a few blog posts but they're all still up. I plan on archiving a few blog posts but they won't be deleted.</p>
+   <p>That's it for the website update. Thank you for reading and have a good day! Hopefully next blog post will be a little more useful! 😃</p>]]>
+   </description>
+</item>
 </channel>
 </rss>
