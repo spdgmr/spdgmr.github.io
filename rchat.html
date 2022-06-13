@@ -56,7 +56,7 @@
   <p>From here, you can read the documentation by typing ':help'.</p>
 <h1>Patches</h1>
   <p>rchat doesn't come with features I believe a lot of people won't use. If you need more, you can use the GNU 'patch' command with one of these .diff files below.</p>
-<h2>Xresources</h2>
+<h3>Xresources</h3>
   <p>This patch enables .Xresources support for rchat. It allows setting the following values:
 <ul>
   <li>rchat.color1</li>
@@ -68,15 +68,23 @@
   <li>rchat.instance</li>
   <li>rchat.refresh</li>
   <li>rchat.linecount</li>
+  <li>rchat.sep (1.0 only)</li>
 </ul>
+  <p>If you use rchat 0.5, use the 0.5 patch.</p>
+  <p>If you use rchat 1.0 or 1.1, use the 1.0 patch.</p>
   <p>Simply apply as usual.</p>
-<h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-0.5.diff">rchat-xresources-0.5.diff</a></h3>
-<h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-1.0.diff">rchat-xresources-1.0.diff</a></h3>
-<h2>Notifications</h2>
+<h4><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-0.5.diff">rchat-xresources-0.5.diff</a></h4>
+<h4><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-xresources-1.0.diff">rchat-xresources-1.0.diff</a></h4>
+<h3>Notifications</h3>
   <img src="img/notif.png" alt="image">
   <p>This patch enables support for notifications in rchat using 'notify-send'. Make sure to install 'libnotify-send' before using.</p>
-  <h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-0.5.diff">rchat-notification-0.5.diff</a></h3>
-  <h3><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-1.0.diff">rchat-notification-1.0.diff</a></h3>
+  <h4><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-0.5.diff">rchat-notification-0.5.diff</a></h4>
+  <h4><a href="https://raw.githubusercontent.com/speediegamer/rchat/patches/rchat-notification-1.0.diff">rchat-notification-1.0.diff</a></h4>
+<h3>Open URL</h3>
+  <p>This patch adds a ':open' feature which opens the last URL displayed in your terminal.</p>
+  <p>Really simple, but also extremely useful if you want to view links quickly.</p>
+  <p>1.1 version likely compatible with 1.0!</p>
+  <h4><a href="https://raw.githubusercontent.com/speediegq/rchat/patches/rchat-openurl-1.1.diff">rchat-openurl-1.1.diff"</a></h4>
 </body>
 <footer>
 <h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
