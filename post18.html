@@ -1,0 +1,43 @@
+<head>
+<div class="header">
+<title>I HATE ATI!!! // speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="ATI graphics cards are not usually talked about but they are the absolute worst for GNU/Linux performance. In fact, they render your GNU/Linux box unusable. This is a rant about my terrible experience with them on various different computers as well as what graphics cards are good for GNU/Linux (spoiler, none of them are ATI).">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<link rel="stylesheet" href="css/rms.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+<a href="donate.html">💰Donate</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>I HATE ATI!!!<h2>
+<h4>2022-06-18</h4>
+<strong>I HATE ATI!!!</strong>
+<p>It's been a bit since a proper blog post was made so today I'd like to rant about ATI who clearly are not capable of making a graphics card that works under GNU/Linux. Sounds familiar? NVIDIA? Actually, NVIDIA is still better at this because at least their GPUs ACTUALLY WORK under GNU/Linux.</p>
+<p>So anyways. Yesterday I installed Arch Linux on my laptop which has an ATI Radeon 5650m. It's some old Packard Bell machine from ~2009. The RADEON 5650m is not a fancy graphics card but it should be more than enough to have transparency in terminals with.. usable performance. Especially since it ran Windows 7 well (At least as well as such a spyware trash operating system can).</p>
+<p>As always, installation boots fine, I install xorg-server, xorg-xinit and <a href="dwm.html">my build of dwm</a>. Of course, this works fine and performance is good enough but as soon as i install <code>picom</code> and run the usual <code>picom &</code>, the entire computer slows down to the point where it's almost unusable and terminals take 10 seconds to spawn.</p>
+<p>It's not an <code>st</code> issue either because <code>dmenu</code> also takes AT LEAST 10 seconds to open. Absolutely ridiculous for a simple run launcher/menu.</p>
+<p>You might say I'm biased because it's only one computer and it might be broken or something, alright fair enough so I tried on another computer. I installed Arch Linux on my Early 2008 iMac which has an ATI Radeon 2600XT and a Core 2 Duo processor. This Mac runs Mac OS X Snow Leopard great and Mac OS X Tiger through <a href="project081.html">Project 081</a>.</p>
+<p>This time I also followed the Arch Linux Wiki on ATI graphics cards and after an install of Arch and dwm, the thing is still unusable just like the Packard Bell laptop. Windows take ages to spawn and when they <i>do</i> spawn, are really <strong>really</strong> slow.</p>
+<p>So I kill <code>picom</code> and right away, the computer actually works and terminals spawn instantly. Every single computer with ATI graphics have had TERRIBLE GNU/Linux support making them unusable if you want transparency.</p>
+<p>Now, if you didn't know, AMD bought ATI and as such, ATI branded GPUs are no longer being produced meaning this isn't really a big issue if you only use new computers. In fact, my main desktop has an RX 570 + 580 (used for gpu passthrough) and it runs GNU/Linux with my dwm rice perfectly so AMD actually did <i>something</i> useful.</p>
+<p>So to end this blog post off, If you want an older laptop/desktop to use with GNU/Linux, avoid ATI. If the computer is new enough to have an AMD graphics card then you are probably fine. You would probably also want to avoid NVIDIA due to their terrible proprietary drivers (although hopefully this changes now that kernel modules are "open source") leaving Intel as the best choice for GNU/Linux.</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>
