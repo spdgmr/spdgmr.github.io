@@ -1,0 +1,42 @@
+<head>
+<div class="header">
+<title>rchat 1.3 is out! (I AM GREAT AT PUSHING UPDATES!)</title>
+<meta charset="UTF-8">
+<meta name="description" content="rchat 1.3 has finally been released. Hopefully it does not break any existing patches. If it does then.. well, they should be updated shortly. So, what changed with update 1.3? Mostly fixing bugs but I did replace ~ with $HOME as it works better. But in doing so, I introduced a massive bug and it's likely the dumbest thing I've done so far.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<link rel="stylesheet" href="css/rms.css">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/antibloat.png">
+<a href="index.html">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="rss.xml">📰 RSS</a>
+<a href="donate.html">💰Donate</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>rchat 1.3 is out! (I AM GREAT AT PUSHING UPDATES!)<h2>
+<h4>2022-06-29</h4>
+<p>Alright so, rchat 1.3 has finally been released. Hopefully it does not break any existing patches. If it does then.. well, they should be updated shortly.</p>
+<p>So, what changed with update 1.3? Mostly fixing bugs but I did replace <code>~</code> with <code>$HOME</code> as it works better. But in doing so, I introduced a massive bug and it's likely the dumbest thing I've done so far.</p> 
+<p>Now, to make this easy and quick, I decided to use <code>sed</code> to replace all instances. Normally this would be fine but the problem is, I ran <code>sed -i "s|~/|$HOME/|g"</code> which was a problem because if you are new to the terminal, $HOME is a variable defined on every GNU/Linux system. This means <code>~/</code> was replaced with <code>/home/anon</code> because <code>/home/anon</code> is my $HOME directory/variable. This meant rchat was broken for everyone except the people who happen to have their user account named anon.</p>
+<p>So of course, this release fixes this issue and nothing more.</p>
+<p>To install rchat, see <a href="rchat.html">the rchat page</a>.</p>
+<p>To update, if you are on rchat 1.2 or newer, simply respond with Y when prompted for an update.</p>
+<p>If you are on rchat 0.5 or older (Latest release on the AUR as of 2022-06-29, <code>pacman -R rchat</code> and follow the instructions on the <a href="rchat.html">rchat page</a>.</p>
+<p>If you are on rchat 0.5 or older (Latest release on the splay overlay on Gentoo as of 2022-06-29, <code>emerge --deselect rchat</code> and follow the instructions on the <a href="rchat.html">rchat page</a>.</p>
+<p>That's it for this update, thank you for reading the blog post, have a good day!</p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</body>
+</html>

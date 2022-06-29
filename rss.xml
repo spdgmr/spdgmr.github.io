@@ -148,8 +148,7 @@
 	<p>- To install rchat 0.5 on Arch, simply install the AUR package. You can use an AUR helper like 'yay' if you want. Usage with 'yay' is 'yay -S rchat'.</p>
 	<p>- For other GNU/Linux distributions, you can head over to my GitHub and download the latest version. Or clone it using Git.</p>
 	<p>The latest release can be found here. Simply download, save to /usr/bin/rchat and chmod +x /usr/bin/rchat.</p>
-        <p>https://raw.githubusercontent.com/speediegq/rchat/main/rchat</p>
-	<p>- speedie</p>]]>
+        <p>https://raw.githubusercontent.com/speediegq/rchat/main/rchat</p>]]>
 	</description>
  </item>
  <item>
@@ -171,8 +170,7 @@
 	<p>It's getting really common. balenaEtcher, Discord, Spotify, Telegram, etc. desktop clients are all using Electron/Chromium.</p>
 	<p>So what do I want? I want a decentralized web. To support this, we need to somehow grow Firefox and Webkit based browsers' marketshare so that the marketshare is more even. So that, if Google eventually destroys Chromium and makes it a spyware monopoly, we have another engine to fall back on.</p>
         <p>A good way to do this would be to bring back the old 'Choose a browser' prompt Microsoft was forced to show every time Internet Explorer was launched on Windows 7 and 8.</p>
-        <p>To contribute to this, I've decided to BAN myself from ever touching anything based on Chromium or Electron. Chromium might be great, or it might suck but I refuse to support a bloated, centralized web. If you wanna support a decentralized web, I suggest you do the same.</p>
-	<p> - speedie</p>]]>
+        <p>To contribute to this, I've decided to BAN myself from ever touching anything based on Chromium or Electron. Chromium might be great, or it might suck but I refuse to support a bloated, centralized web. If you wanna support a decentralized web, I suggest you do the same.</p>]]>
         </description>
  </item>
  <item>
@@ -352,6 +350,23 @@
    <p>Patches are basically snippets of code from other people's dwm forks that contain additional features. For example, not every wants transparency but if you do, there's an alpha patch available which adds it to dwm. dwm can be as minimal or as bloated as the user wants, that's what's so great about suckless software.</p>
    <p>So, conclusion then. Should you use dwm? If you want an experience that's nearly limitless and allows you the most control then yes. If you're the kind of person who wants the least amount of dependencies or a window manager as fast as it gets, dwm is probably for you.</p>
 <p>However, if you don't like tiling window managers and don't want to control everything using a keyboard then you can just head back to your Ubuntu + GNOME environment that you are so familiar with. As for me, I'm going to continue maintaining <a href="dwm.html">my dwm fork</a> because it has improved my productivity by a lot. My computer is much faster with dwm than it ever was before and consumes much less RAM.</p>]]>
+   </description>
+</item>
+<item>
+   <title>rchat 1.3 is out! (I AM GREAT AT PUSHING UPDATES!)</title>
+   <link>https://speedie.gq/post20.html</link>
+   <guid>https://speedie.gq/post20.html</guid>
+   <pubDate>Wed, 29 June 2022 00:00:00 GMT</pubDate>
+   <description>
+   <![CDATA[<p>Alright so, rchat 1.3 has finally been released. Hopefully it does not break any existing patches. If it does then.. well, they should be updated shortly.</p>
+   <p>So, what changed with update 1.3? Mostly fixing bugs but I did replace <code>~</code> with <code>$HOME</code> as it works better. But in doing so, I introduced a massive bug and it's likely the dumbest thing I've done so far.</p> 
+   <p>Now, to make this easy and quick, I decided to use <code>sed</code> to replace all instances. Normally this would be fine but the problem is, I ran <code>sed -i "s|~/|$HOME/|g"</code> which was a problem because if you are new to the terminal, $HOME is a variable defined on every GNU/Linux system. This means <code>~/</code> was replaced with <code>/home/anon</code> because <code>/home/anon</code> is my $HOME directory/variable. This meant rchat was broken for everyone except the people who happen to have their user account named anon.</p>
+   <p>So of course, this release fixes this issue and nothing more.</p>
+   <p>To install rchat, see <a href="rchat.html">the rchat page</a>.</p>
+   <p>To update, if you are on rchat 1.2 or newer, simply respond with Y when prompted for an update.</p>
+   <p>If you are on rchat 0.5 or older (Latest release on the AUR as of 2022-06-29, <code>pacman -R rchat</code> and follow the instructions on the <a href="rchat.html">rchat page</a>.</p>
+   <p>If you are on rchat 0.5 or older (Latest release on the splay overlay on Gentoo as of 2022-06-29, <code>emerge --deselect rchat</code> and follow the instructions on the <a href="rchat.html">rchat page</a>.</p>
+   <p>That's it for this update, thank you for reading the blog post, have a good day!</p>]]>
    </description>
 </item>
 </channel>
