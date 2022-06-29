@@ -1,0 +1,54 @@
+<head>
+<title>speedie's website</title>
+<meta charset="UTF-8">
+<meta name="description" content="Add my Gentoo Linux overlay.">
+<meta name="author" content="speedie">
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" /><link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+<link rel="stylesheet" href="css/regular.css">
+<div class="header">
+<h1>speedie's website</h1>
+<link rel="icon" type="image/png" href="img/antibloat.png">
+<a href="">🏠 Home</a>
+<a href="projects.html">💾 Projects</a>
+<a href="blog.html">📘 Blog</a>
+<a href="guides.html">📕 Guides</a>
+<a href="mailto:speedie@duck.com">📧 Email</a>
+<a href="https://github.com/speedie-de">🐧 Dotfiles</a>
+<a href="donate.html">💰Donate</a>
+<a href="rss.xml">📰 RSS</a>
+</a>
+</div>
+<hr>
+</header>
+<body>
+<h2>speedie's gentoo overlay</h2>
+<p>Since I maintain forks of software as well as some of my own, I decided to create a Gentoo overlay so that you can install my dotfiles and software using <code>portage</code>.</p>
+<p>As of now, this requires <code>layman</code>. This can be installed using <code>portage</code> as well.</p>
+<h3>📎What is an overlay?</h3>
+<p>An overlay is pretty much a third party Gentoo repository with other ebuilds not normally found in the regular Gentoo repositories. Often it's the only way to install software other than compiling from source yourself.</p>
+<h3>📦What packages does this overlay offer?</h3>
+<p>See 'Ebuild list' further down this page.</p>
+<h3>🐧What distributions can I install this on?</h3>
+<p>Gentoo is the only distro I've tested this on. It might work on other Gentoo based distributions that use the <code>portage</code> package manager but it will NOT work on Arch, Debian or other distros that are not Gentoo based.</p>
+<h3>➕How can I add this overlay?</h3>
+<p>Simply install <code>layman</code> using <code>emerge app-portage/layman</code> and run the command below:</p>
+<p>To add my overlay: <code>layman -o https://speedie.gq/overlay.xml -f -a splay</code></p>
+<h3>🔨Ebuild list</h3>
+<p>This Gentoo overlay currently has the following ebuilds available:</p>
+<ul>
+		<li><h5><code>x11-wm/dwm-spde</code> - My build of <a href="dwm.html">dwm</a></h5></li>
+		<li><h5><code>x11-misc/dmenu-spde</code> - My build of <a href="https://github.com/speedie-de/dmenu">dmenu</a></h5></li>
+		<li><h5><code>x11-misc/xshbar</code> - xshbar status bar</h5></li>
+		<li><h5><code>x11-terms/st-spde</code> - My build of <a href="https://github.com/speedie-de/st">st</a></h5></li>
+		<li><h5><code>net-misc/rchat</code> - rchat rautafarmi client</h5></li>
+		<li><h5><code>x11-libs/libXft</code> - Patched version of libXft called libXft-bgra which does not crash when a colored emoji is displayed.</h5></li>
+</ul>
+<h3>💰Support me</h3>
+<p>If this overlay was useful, consider donating.</p>
+<p>XMR: <code>43yssh8scu2PxtnrumQEjJ4zcqc2ND87zWipRUb9mkufAb6Zn1mcP8f7zAkopNSdymHWMkEU43nJSgiBVQvW5Y8zEdSqa3W</code></p>
+</body>
+<footer>
+<h2>Website made by speedie, proudly written in Vim on Gentoo Linux.</h2>
+<h4>This website is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</h4>
+</footer>
+</html>
