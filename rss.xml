@@ -369,5 +369,29 @@
    <p>That's it for this update, thank you for reading the blog post, have a good day!</p>]]>
    </description>
 </item>
+<item>
+   <title>PipeWire Review (RSS REVIEWS!!!)</title>
+   <link>https://speedie.gq/post21.html</link>
+   <guid>https://speedie.gq/post21.html</guid>
+   <pubDate>Mon, 04 July 2022 00:00:00 GMT</pubDate>
+   <description>
+   <![CDATA[<p>I should probably start this "review" (calling it that would be stupid) off with a stupid little disclaimer; I am not an audio professional or ALSA expert. I am simply a regular user of a free software operating system.</p>
+   <p>I mainly use my audio devices for consuming content, editing videos and listening to music. That's it. I'm sure there are a few things that an audio professional would disagree with me on and that's fine.</p>
+   <p>In case I haven't made this clear enough before, I'm not usually a PipeWire/PulseAudio user. I find it kind of pointless because ALSA allows me to do pretty much anything I want and requires no setup except proper kernel options.</p>
+   <p>However, recently I switched to Arch on my ThinkPad X220 and because it doesn't offer any USE flags like Gentoo does, I'm forced to use either PipeWire or PulseAudio with Firefox. Not many developers support ALSA because not many people use only ALSA which means it is getting harder and harder to use ALSA for a lot of people. So what is the PipeWire experience like?</p>
+   <p>PipeWire to me is pretty much just PulseAudio-Improved. It's still an additional program I usually don't need but I can understand why it exists. A lot of audio related work would be an absolute nightmare to do on only ALSA so for most people, having an easy to use solution would probably be a good thing.</p>
+   <p>PipeWire is just that, you install it and it works. On Arch, you have three PipeWire related packages available, <code>pipewire</code>, <code>pipewire-alsa</code> and <code>pipewire-pulse</code>.</p>
+   <p>pipewire-pulse seems to be a compatibility layer for software that requires PulseAudio, and it also allows you to use software like pulsemixer to control it and pipewire-alsa allows you to control PipeWire using ALSA tools (such as alsa-utils) similar to pipewire-pulse. They're both probably worth installing.</p>
+   <p>I initially had to use PipeWire because it was a dependency for <code>firefox</code> which is the web browser I currently use but I decided to try using it for the rest of my system.</p>
+   <p>After installation, it requires no extra setup. You can use the same mixer you did with ALSA or PulseAudio if you installed the extra packages. PipeWire is mostly compatible with PulseAudio.</p>
+   <p>As for audio quality, I tested using both speakers, headphones (wired) and headphones using Bluetooth and they all work great. Usually I'm not a fan of wireless/bluetooth but I had to try it out. Bluetooth works significantly better on PipeWire compared to PulseAudio and even ALSA so if you are a fan of Bluetooth audio, you will definitely want to go with PipeWire.</p>
+   <p>On PulseAudio, the audio is very much out of sync and sometimes doesn't even want to connect properly. On PipeWire, it "just werks" after it's installed and connected properly.</p>
+   <p>I also tried compiling PipeWire on Gentoo and found that it compiled faster than PulseAudio so if you're trying to go for a minimal system, even though ALSA would be more minimal, PipeWire is a better choice.</p>
+   <p>Now let's briefly talk about Wayland support. I've heard PulseAudio support is terrible if not completely broken on Wayland but I cannot test that for myself because I'm not a fan of Wayland. If you're a Wayland user, you would probably want to do some more research into this or avoid PulseAudio entirely.</p>
+   <p>With all said and done; Will I continue to use PipeWire?</p>
+   <p>No.. sort of. I'm going to continue to use PipeWire on my ThinkPad because it is running Arch. I will however continue to use ALSA on my main machine running Gentoo because I don't see the need for anything else.</p>
+   <p>But do I recommend PipeWire? If you're going to use a binary based distribution, absolutely. It is a lot better than PulseAudio in many ways. However if you're using a source based distribution where you can choose to use only ALSA and that works for you then I would say continue to use ALSA.</p>]]>
+   </description>
+</item>
 </channel>
 </rss>
