@@ -411,5 +411,30 @@
    <p>That's it for this blog post, have a good day/night!</p>]]>
    </description>
 </item>
+<item>
+   <title>Why I ban software.</title>
+   <link>https://speedie.gq/post23.html</link>
+   <guid>https://speedie.gq/post23.html</guid>
+   <pubDate>Wed, 20 July 2022 00:00:00 GMT</pubDate>
+   <description>
+    <![CDATA[<p>For some reason, people feel the need to ask me why I ban certain software. Why I ban myself from trying new software for seemingly made up reasons. In this blog post I explain the reason why I choose not to use certain software.</p>
+    <p>First of all, when I say 'ban' I simply mean I refuse to install or even try said software. This can be due to many different reasons however usually it's software that goes against my philosophy completely.</p>
+    <p>If you've been following my blog for a while, or know me on some other platform, you know that I only recommend free (as in freedom) software and this is for good reason. With free software, the user is in control, not the developer while with non-free software, the developer has a lot of power over the user and can hide malicious features in the software that will not ever be discovered.</p>
+    <p>So a lot of software I ban is automatically banned from my life due to freedom violating features. A good example of this would be Windows 11 which recently started changing the search feature in the start menu without the user's permission. For example, back in June during Pride month, Microsoft thought it would be a good idea to add a rainbow to Windows 11 users' search bar.</p>
+    <p>No matter what your opinion on the LGBT community is, there is no excuse for this and it's a great example of how you, the computer user is not in control. For this reason, I only promote free software and personally only use non-free software if absolutely necessary for hardware support on my computers (such as Intel ME or firmware for wireless).</p>
+    <p>Other software I choose to ban because of what the software was designed to do. A good example here would be Flatpaks, which aim to destroy the GNU/Linux operating system by creating distro independent packages that contain all dependencies no matter if they're required on the system or not. The goal is simplicity but this also means they're throwing minimalism and user choice out the window.</p>
+    <p>I've ranted about these a lot in the past but by banning terrible software like this, I'm doing my part in preventing this kind of software from taking over people's computers. Normies are not willing to do it because they value convenience above everything else, the only people who do this are the enthusiasts and activists and that's a shame.</p>
+    <p>So what change do I want to see?</p>
+    <ul>
+		  <li>Privacy and freedom respecting software.</li>
+		  <p>When using a piece of software, you should expect it to leave YOU in control, but most of the time with stupid software, the developer or even the software itself is in power, not the user. It should also provide proper privacy, none of this <a href="post12.html">fake privacy</a> nonsense. User data is very valuable and as such, this requirement is not likely to be followed any time soon.</p>
+		  <li>Minimal software with actual effort put into them.</li>
+		  <p>Most software nowadays has one goal; Create the application as quickly and cheaply as possible so that it can make money. Most developers do not care about the code quality at all, instead saying 'Well we have modern computers anyway so who cares' and moving on with their day writing terrible software. As a result, most software nowadays sucks and normies do not care.</p>
+		  <li>Normies taking the matter into their own hands.</li>
+		  <p>Because companies who produce this terrible software get paid either way and because normies don't care, the companies will continue producing this terrible software and the consumers will continue consuming the products without a second thought. The consumers will blame it on 'Oh the future' or 'It is so convenient' but it's a serious issue. Problem is the normies are too busy looking into the future to care. We must convince the normie to value quality software over garbage and to stop using terrible software.</p>
+   </ul>
+   <p>I'm gonna do things my way, it's my way, my way or the highway. Thanks for reading this blog post and have a great day!</p>]]>
+   </description>
+</item>
 </channel>
 </rss>
