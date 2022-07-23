@@ -436,5 +436,19 @@
    <p>I'm gonna do things my way, it's my way, my way or the highway. Thanks for reading this blog post and have a great day!</p>]]>
    </description>
 </item>
+<item>
+   <title>What happened to spDE? (And announcement)</title>
+   <link>https://speedie.gq/post24.html</link>
+   <guid>https://speedie.gq/post24.html</guid>
+   <pubDate>Sat, 23 July 2022 00:00:00 GMT</pubDate>
+   <description>
+   <![CDATA[<p>Today's post is going to be short, and more announcement-y than usual. If you tried using spDE after around April, you may have noticed that it seems to no longer work. No this was not a failure on my end, it was done on purpose.</p>
+   <p>So first of all, if someone tries to use spDE right now, the script will quit with seemingly no error reported. This is because of a line I added to the start script on purpose. You might ask, why destroy the script on purpose?</p>
+   <p>The line was added because I had updated my builds of suckless software causing the builds to no longer compile. In addition, a few changes to distro repositories broke the script on Void GNU/Linux and Arch GNU/Linux based distributions. While this would be an easy fix, I had switched software too meaning the scripts were very out of date and as such not useful anyway.</p>
+   <p>So to prevent users' from destroying their GNU/Linux systems, I decided to break the script on purpose before it has a chance to install anything knowing that I would probably update or rewrite the script at a later date. Well.. It is July now and it is still broken and unmaintained.</p>
+   <p>This is where this announcement comes in. I have plans to completely rewrite spDE in a more maintainable way so that things can be added, swapped out and ommited without any trouble, both by the end user and by contributors in order to keep the experience as simple as possible. In addition, I'm going to provide great documentation (a lot already comes with <a href="dwm.html">my build of dwm</a>) so really, spDE is going to be an install script for my build of dwm, any dependencies as well as other software I use with it. (music player, file manager, bluetooth, status bar, etc.).</p>
+   <p>Expect to see another announcement post shortly when it's complete! Have a good day!</p>]]>
+   </description>
+</item>
 </channel>
 </rss>
